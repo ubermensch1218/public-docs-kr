@@ -1,16 +1,17 @@
 {
   "metadata": {
     "description": "GovKR-MD 법령 관계 그래프",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "updated": "2026-03-09",
     "source": "https://law.go.kr",
     "stats": {
-      "nodes": 27,
-      "edges": 30
+      "nodes": 31,
+      "edges": 38
     }
   },
   "nodes": [
     {"id": "LS_1948_0001", "title": "대한민국 헌법", "type": "constitution", "level": 0},
+
     {"id": "LS_1949_0033", "title": "국세기본법", "type": "law", "level": 1},
     {"id": "LS_1953_0293", "title": "형법", "type": "law", "level": 1},
     {"id": "LS_1960_0472", "title": "민법", "type": "law", "level": 1},
@@ -24,17 +25,22 @@
     {"id": "LS_1962_1000", "title": "상법", "type": "law", "level": 1},
     {"id": "LS_1963_0079", "title": "수도법", "type": "law", "level": 1},
     {"id": "LS_1967_0542", "title": "법인세법", "type": "law", "level": 1},
+    {"id": "LS_1972_0237", "title": "환경정책기본법", "type": "law", "level": 1},
     {"id": "LS_1976_0885", "title": "의료법", "type": "law", "level": 1},
     {"id": "LS_1980_0033", "title": "국가공무원법", "type": "law", "level": 1},
+    {"id": "LS_1993_0452", "title": "소비자기본법", "type": "law", "level": 1},
+    {"id": "LS_1995_0496", "title": "물환경보전법", "type": "law", "level": 1},
     {"id": "LS_1997_0530", "title": "근로기준법", "type": "law", "level": 1},
     {"id": "LS_1997_0543", "title": "교육기본법", "type": "law", "level": 1},
     {"id": "LS_2003_0695", "title": "주택법", "type": "law", "level": 1},
     {"id": "LS_2011_0658", "title": "정보통신망법", "type": "law", "level": 1},
     {"id": "LS_2011_6258", "title": "개인정보 보호법", "type": "law", "level": 1},
-    {"id": "LS_2164", "title": "농수산물유통및가격안정에관한법률", "type": "law", "level": 1},
+    {"id": "LS_2019_15970", "title": "기후위기대응법", "type": "law", "level": 1},
+
     {"id": "DC_1961_0789", "title": "도로교통법 시행령", "type": "decree", "level": 2, "parent": "LS_1961_0789"},
     {"id": "DC_1997_0530", "title": "근로기준법 시행령", "type": "decree", "level": 2, "parent": "LS_1997_0530"},
     {"id": "DC_2011_6258", "title": "개인정보 보호법 시행령", "type": "decree", "level": 2, "parent": "LS_2011_6258"},
+
     {"id": "RC_2011_6258", "title": "개인정보 보호법 시행규칙", "type": "rule", "level": 3, "parent": "DC_2011_6258"}
   ],
   "edges": [
@@ -43,12 +49,11 @@
     {"from": "LS_1948_0001", "to": "LS_1962_1000", "type": "parent", "article": "제23조"},
     {"from": "LS_1948_0001", "to": "LS_1997_0530", "type": "parent", "article": "제32조"},
     {"from": "LS_1948_0001", "to": "LS_2011_6258", "type": "parent", "article": "제10조, 제17조"},
-    {"from": "LS_1948_0001", "to": "LS_2011_0658", "type": "parent", "article": "제17조"},
-    {"from": "LS_1948_0001", "to": "LS_1976_0885", "type": "parent", "article": "제36조"},
-    {"from": "LS_1948_0001", "to": "LS_1963_0079", "type": "parent", "article": "제35조"},
+    {"from": "LS_1948_0001", "to": "LS_1972_0237", "type": "parent", "article": "제35조"},
     {"from": "LS_1948_0001", "to": "LS_1961_0385", "type": "parent", "article": "제36조"},
     {"from": "LS_1948_0001", "to": "LS_1997_0543", "type": "parent", "article": "제29조, 제31조"},
     {"from": "LS_1948_0001", "to": "LS_2003_0695", "type": "parent", "article": "제35조"},
+    {"from": "LS_1948_0001", "to": "LS_1993_0452", "type": "parent", "article": "제23조"},
 
     {"from": "LS_2011_6258", "to": "DC_2011_6258", "type": "enables", "article": "제78조"},
     {"from": "DC_2011_6258", "to": "RC_2011_6258", "type": "enables", "article": "제63조"},
@@ -59,16 +64,19 @@
     {"from": "LS_1961_0789", "to": "DC_1961_0789", "type": "enables", "article": "제121조"},
     {"from": "DC_1961_0789", "to": "LS_1961_0789", "type": "implements"},
 
-    {"from": "LS_2011_6258", "to": "LS_2011_0658", "type": "references", "note": "개인정보 보호 관련"},
+    {"from": "LS_1972_0237", "to": "LS_1995_0496", "type": "references", "note": "수질관련"},
+    {"from": "LS_1972_0237", "to": "LS_2019_15970", "type": "references", "note": "기후관련"},
+    {"from": "LS_1995_0496", "to": "LS_1963_0079", "type": "references", "note": "수도관련"},
+    {"from": "LS_2011_6258", "to": "LS_2011_0658", "type": "references", "note": "정보통신망"},
     {"from": "LS_1997_0530", "to": "LS_1953_0293", "type": "references", "note": "형법 참조"},
     {"from": "LS_1961_0789", "to": "LS_1953_0293", "type": "references", "note": "교통사고 처벌"},
     {"from": "LS_1961_0456", "to": "LS_1961_0789", "type": "references", "note": "소방차 우선통행"},
     {"from": "LS_1961_0456", "to": "LS_1962_0526", "type": "references", "note": "건축물 소방시설"},
-    {"from": "LS_1949_0033", "to": "LS_1961_0736", "type": "references", "note": "소득세 관련"},
-    {"from": "LS_1949_0033", "to": "LS_1961_0734", "type": "references", "note": "부가가치세 관련"},
-    {"from": "LS_1949_0033", "to": "LS_1967_0542", "type": "references", "note": "법인세 관련"},
-    {"from": "LS_2003_0695", "to": "LS_1962_0526", "type": "references", "note": "주택 건축 기준"},
-    {"from": "LS_1961_0385", "to": "LS_1976_0885", "type": "references", "note": "식품의약품 안전"}
+    {"from": "LS_1949_0033", "to": "LS_1961_0736", "type": "references", "note": "소득세"},
+    {"from": "LS_1949_0033", "to": "LS_1961_0734", "type": "references", "note": "부가가치세"},
+    {"from": "LS_1949_0033", "to": "LS_1967_0542", "type": "references", "note": "법인세"},
+    {"from": "LS_2003_0695", "to": "LS_1962_0526", "type": "references", "note": "주택건축기준"},
+    {"from": "LS_1993_0452", "to": "LS_1960_0472", "type": "references", "note": "소비자계약"}
   ],
   "law_hierarchy": {
     "0": {"name": "헌법", "types": ["constitution"]},
