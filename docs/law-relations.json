@@ -1,12 +1,12 @@
 {
   "metadata": {
     "description": "GovKR-MD 법령 관계 그래프",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "updated": "2026-03-09",
     "source": "https://law.go.kr",
     "stats": {
-      "nodes": 24,
-      "edges": 25
+      "nodes": 27,
+      "edges": 30
     }
   },
   "nodes": [
@@ -14,6 +14,7 @@
     {"id": "LS_1949_0033", "title": "국세기본법", "type": "law", "level": 1},
     {"id": "LS_1953_0293", "title": "형법", "type": "law", "level": 1},
     {"id": "LS_1960_0472", "title": "민법", "type": "law", "level": 1},
+    {"id": "LS_1961_0385", "title": "식품위생법", "type": "law", "level": 1},
     {"id": "LS_1961_0456", "title": "소방기본법", "type": "law", "level": 1},
     {"id": "LS_1961_0734", "title": "부가가치세법", "type": "law", "level": 1},
     {"id": "LS_1961_0736", "title": "소득세법", "type": "law", "level": 1},
@@ -26,6 +27,8 @@
     {"id": "LS_1976_0885", "title": "의료법", "type": "law", "level": 1},
     {"id": "LS_1980_0033", "title": "국가공무원법", "type": "law", "level": 1},
     {"id": "LS_1997_0530", "title": "근로기준법", "type": "law", "level": 1},
+    {"id": "LS_1997_0543", "title": "교육기본법", "type": "law", "level": 1},
+    {"id": "LS_2003_0695", "title": "주택법", "type": "law", "level": 1},
     {"id": "LS_2011_0658", "title": "정보통신망법", "type": "law", "level": 1},
     {"id": "LS_2011_6258", "title": "개인정보 보호법", "type": "law", "level": 1},
     {"id": "LS_2164", "title": "농수산물유통및가격안정에관한법률", "type": "law", "level": 1},
@@ -43,6 +46,9 @@
     {"from": "LS_1948_0001", "to": "LS_2011_0658", "type": "parent", "article": "제17조"},
     {"from": "LS_1948_0001", "to": "LS_1976_0885", "type": "parent", "article": "제36조"},
     {"from": "LS_1948_0001", "to": "LS_1963_0079", "type": "parent", "article": "제35조"},
+    {"from": "LS_1948_0001", "to": "LS_1961_0385", "type": "parent", "article": "제36조"},
+    {"from": "LS_1948_0001", "to": "LS_1997_0543", "type": "parent", "article": "제29조, 제31조"},
+    {"from": "LS_1948_0001", "to": "LS_2003_0695", "type": "parent", "article": "제35조"},
 
     {"from": "LS_2011_6258", "to": "DC_2011_6258", "type": "enables", "article": "제78조"},
     {"from": "DC_2011_6258", "to": "RC_2011_6258", "type": "enables", "article": "제63조"},
@@ -60,7 +66,9 @@
     {"from": "LS_1961_0456", "to": "LS_1962_0526", "type": "references", "note": "건축물 소방시설"},
     {"from": "LS_1949_0033", "to": "LS_1961_0736", "type": "references", "note": "소득세 관련"},
     {"from": "LS_1949_0033", "to": "LS_1961_0734", "type": "references", "note": "부가가치세 관련"},
-    {"from": "LS_1949_0033", "to": "LS_1967_0542", "type": "references", "note": "법인세 관련"}
+    {"from": "LS_1949_0033", "to": "LS_1967_0542", "type": "references", "note": "법인세 관련"},
+    {"from": "LS_2003_0695", "to": "LS_1962_0526", "type": "references", "note": "주택 건축 기준"},
+    {"from": "LS_1961_0385", "to": "LS_1976_0885", "type": "references", "note": "식품의약품 안전"}
   ],
   "law_hierarchy": {
     "0": {"name": "헌법", "types": ["constitution"]},
