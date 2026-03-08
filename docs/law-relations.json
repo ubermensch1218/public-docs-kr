@@ -1,12 +1,12 @@
 {
   "metadata": {
     "description": "GovKR-MD 법령 관계 그래프",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "updated": "2026-03-09",
     "source": "https://law.go.kr",
     "stats": {
-      "nodes": 85,
-      "edges": 120
+      "nodes": 103,
+      "edges": 145
     }
   },
   "nodes": [
@@ -69,6 +69,22 @@
     {"id": "LS_2019_15970", "title": "기후위기대응법", "type": "law", "level": 1},
     {"id": "LS_2019_16234", "title": "국민연금법", "type": "law", "level": 1},
     {"id": "LS_2020_16890", "title": "노동조합법", "type": "law", "level": 1},
+    {"id": "LS_1963_0086", "title": "사회복지사업법", "type": "law", "level": 1},
+    {"id": "LS_1963_0141", "title": "변호사법", "type": "law", "level": 1},
+    {"id": "LS_1970_0216", "title": "수산업법", "type": "law", "level": 1},
+    {"id": "LS_1976_0906", "title": "임대주택법", "type": "law", "level": 1},
+    {"id": "LS_1986_0379", "title": "여객자동차법", "type": "law", "level": 1},
+    {"id": "LS_1991_0422", "title": "에너지이용합리화법", "type": "law", "level": 1},
+    {"id": "LS_1994_0475", "title": "옥외광고물법", "type": "law", "level": 1},
+    {"id": "LS_1997_0545", "title": "초중등교육법", "type": "law", "level": 1},
+    {"id": "LS_2000_0616", "title": "유통산업발전법", "type": "law", "level": 1},
+    {"id": "LS_2003_0687", "title": "장애인복지법", "type": "law", "level": 1},
+    {"id": "LS_2004_0717", "title": "해양환경관리법", "type": "law", "level": 1},
+    {"id": "LS_2005_0763", "title": "콘텐츠산업진흥법", "type": "law", "level": 1},
+    {"id": "LS_2006_0804", "title": "방송통신발전법", "type": "law", "level": 1},
+    {"id": "LS_2007_0833", "title": "식품등표시법", "type": "law", "level": 1},
+    {"id": "LS_2013_12480", "title": "지방세법", "type": "law", "level": 1},
+    {"id": "LS_2016_13998", "title": "부패방지법", "type": "law", "level": 1},
 
     {"id": "DC_1961_0789", "title": "도로교통법 시행령", "type": "decree", "level": 2, "parent": "LS_1961_0789"},
     {"id": "DC_1997_0530", "title": "근로기준법 시행령", "type": "decree", "level": 2, "parent": "LS_1997_0530"},
