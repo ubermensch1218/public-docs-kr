@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "description": "GovKR-MD 법령 관계 그래프",
+    "version": "1.1.0",
+    "updated": "2026-03-09",
+    "source": "https://law.go.kr",
+    "stats": {
+      "nodes": 13,
+      "edges": 18
+    }
+  },
+  "nodes": [
+    {"id": "LS_1948_0001", "title": "대한민국 헌법", "type": "constitution", "level": 0},
+    {"id": "LS_1953_0293", "title": "형법", "type": "law", "level": 1},
+    {"id": "LS_1960_0472", "title": "민법", "type": "law", "level": 1},
+    {"id": "LS_1962_1000", "title": "상법", "type": "law", "level": 1},
+    {"id": "LS_1961_0789", "title": "도로교통법", "type": "law", "level": 1},
+    {"id": "LS_1961_0778", "title": "국가보안법", "type": "law", "level": 1},
+    {"id": "LS_1997_0530", "title": "근로기준법", "type": "law", "level": 1},
+    {"id": "LS_2011_0658", "title": "정보통신망법", "type": "law", "level": 1},
+    {"id": "LS_2011_6258", "title": "개인정보 보호법", "type": "law", "level": 1},
+    {"id": "LS_2164", "title": "농수산물유통및가격안정에관한법률", "type": "law", "level": 1},
+    {"id": "DC_2011_6258", "title": "개인정보 보호법 시행령", "type": "decree", "level": 2, "parent": "LS_2011_6258"},
+    {"id": "DC_1997_0530", "title": "근로기준법 시행령", "type": "decree", "level": 2, "parent": "LS_1997_0530"},
+    {"id": "DC_1961_0789", "title": "도로교통법 시행령", "type": "decree", "level": 2, "parent": "LS_1961_0789"}
+  ],
+  "edges": [
+    {"from": "LS_1948_0001", "to": "LS_1953_0293", "type": "parent", "article": "제12조"},
+    {"from": "LS_1948_0001", "to": "LS_1960_0472", "type": "parent", "article": "제23조"},
+    {"from": "LS_1948_0001", "to": "LS_1962_1000", "type": "parent", "article": "제23조"},
+    {"from": "LS_1948_0001", "to": "LS_1997_0530", "type": "parent", "article": "제32조"},
+    {"from": "LS_1948_0001", "to": "LS_2011_6258", "type": "parent", "article": "제10조, 제17조"},
+    {"from": "LS_1948_0001", "to": "LS_2011_0658", "type": "parent", "article": "제17조"},
+
+    {"from": "LS_2011_6258", "to": "DC_2011_6258", "type": "enables", "article": "제78조"},
+    {"from": "DC_2011_6258", "to": "LS_2011_6258", "type": "implements"},
+    {"from": "LS_1997_0530", "to": "DC_1997_0530", "type": "enables", "article": "제123조"},
+    {"from": "DC_1997_0530", "to": "LS_1997_0530", "type": "implements"},
+    {"from": "LS_1961_0789", "to": "DC_1961_0789", "type": "enables", "article": "제121조"},
+    {"from": "DC_1961_0789", "to": "LS_1961_0789", "type": "implements"},
+
+    {"from": "LS_2011_6258", "to": "LS_2011_0658", "type": "references", "note": "개인정보 보호 관련"},
+    {"from": "LS_1997_0530", "to": "LS_1953_0293", "type": "references", "note": "형법 참조"},
+    {"from": "LS_1961_0789", "to": "LS_1953_0293", "type": "references", "note": "교통사고 처벌"}
+  ],
+  "law_hierarchy": {
+    "0": {"name": "헌법", "types": ["constitution"]},
+    "1": {"name": "법률", "types": ["law"]},
+    "2": {"name": "대통령령", "types": ["decree"]},
+    "3": {"name": "총리령/부령", "types": ["rule"]},
+    "4": {"name": "조례/규칙", "types": ["ordinance"]}
+  },
+  "relation_types": {
+    "parent": "상위법",
+    "enables": "제정 위임",
+    "implements": "시행",
+    "amends": "개정",
+    "supersedes": "대체",
+    "references": "참조",
+    "conflicts": "충돌"
+  }
+}
