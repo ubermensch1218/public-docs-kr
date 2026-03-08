@@ -1,12 +1,12 @@
 {
   "metadata": {
     "description": "GovKR-MD 법령 관계 그래프",
-    "version": "2.3.0",
+    "version": "2.4.0",
     "updated": "2026-03-09",
     "source": "https://law.go.kr",
     "stats": {
-      "nodes": 118,
-      "edges": 170
+      "nodes": 123,
+      "edges": 180
     }
   },
   "nodes": [
@@ -30,6 +30,11 @@
     {"id": "LS_1961_0895", "title": "임대주택법", "type": "law", "level": 1},
     {"id": "LS_1961_0903", "title": "수산업법", "type": "law", "level": 1},
     {"id": "LS_1963_0084", "title": "변호사법", "type": "law", "level": 1},
+    {"id": "LS_1961_0871", "title": "콘텐츠산업진흥법", "type": "law", "level": 1},
+    {"id": "LS_1961_0875", "title": "해양환경관리법", "type": "law", "level": 1},
+    {"id": "LS_1961_0878", "title": "장애인복지법", "type": "law", "level": 1},
+    {"id": "LS_1961_0889", "title": "옥외광고물등관리법", "type": "law", "level": 1},
+    {"id": "LS_1961_0891", "title": "에너지이용합리화법", "type": "law", "level": 1},
     {"id": "LS_1961_0385", "title": "식품위생법", "type": "law", "level": 1},
     {"id": "LS_1961_0456", "title": "소방기본법", "type": "law", "level": 1},
     {"id": "LS_1961_0734", "title": "부가가치세법", "type": "law", "level": 1},
@@ -228,7 +233,18 @@
 
     {"from": "LS_1961_0866", "to": "LS_1962_0559", "type": "references", "note": "도로교통법"},
     {"from": "LS_1961_0895", "to": "LS_1960_0103", "type": "references", "note": "주택법"},
-    {"from": "LS_1963_0084", "to": "LS_1960_0472", "type": "references", "note": "민법"}
+    {"from": "LS_1963_0084", "to": "LS_1960_0472", "type": "references", "note": "민법"},
+
+    {"from": "LS_1948_0001", "to": "LS_1961_0871", "type": "parent", "article": "제22조"},
+    {"from": "LS_1948_0001", "to": "LS_1961_0875", "type": "parent", "article": "제35조"},
+    {"from": "LS_1948_0001", "to": "LS_1961_0878", "type": "parent", "article": "제34조"},
+    {"from": "LS_1948_0001", "to": "LS_1961_0889", "type": "parent", "article": "제21조"},
+    {"from": "LS_1948_0001", "to": "LS_1961_0891", "type": "parent", "article": "제119조"},
+
+    {"from": "LS_1961_0871", "to": "LS_1962_0538", "type": "references", "note": "저작권법"},
+    {"from": "LS_1961_0875", "to": "LS_1972_0237", "type": "references", "note": "환경정책기본법"},
+    {"from": "LS_1961_0878", "to": "LS_2009_0976", "type": "references", "note": "장애인차별금지법"},
+    {"from": "LS_1961_0891", "to": "LS_1972_0237", "type": "references", "note": "환경정책기본법"}
   ],
   "law_hierarchy": {
     "0": {"name": "헌법", "types": ["constitution"]},
