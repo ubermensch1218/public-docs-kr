@@ -1,12 +1,12 @@
 {
   "metadata": {
     "description": "GovKR-MD 법령 관계 그래프",
-    "version": "2.2.0",
+    "version": "2.3.0",
     "updated": "2026-03-09",
     "source": "https://law.go.kr",
     "stats": {
-      "nodes": 113,
-      "edges": 160
+      "nodes": 118,
+      "edges": 170
     }
   },
   "nodes": [
@@ -25,6 +25,11 @@
     {"id": "LS_1978_0304", "title": "공인회계사법", "type": "law", "level": 1},
     {"id": "LS_1992_0449", "title": "중소기업기본법", "type": "law", "level": 1},
     {"id": "LS_1997_0549", "title": "고등교육법", "type": "law", "level": 1},
+    {"id": "LS_1961_0726", "title": "병역법", "type": "law", "level": 1},
+    {"id": "LS_1961_0866", "title": "여객자동차운수사업법", "type": "law", "level": 1},
+    {"id": "LS_1961_0895", "title": "임대주택법", "type": "law", "level": 1},
+    {"id": "LS_1961_0903", "title": "수산업법", "type": "law", "level": 1},
+    {"id": "LS_1963_0084", "title": "변호사법", "type": "law", "level": 1},
     {"id": "LS_1961_0385", "title": "식품위생법", "type": "law", "level": 1},
     {"id": "LS_1961_0456", "title": "소방기본법", "type": "law", "level": 1},
     {"id": "LS_1961_0734", "title": "부가가치세법", "type": "law", "level": 1},
@@ -213,7 +218,17 @@
     {"from": "LS_1978_0304", "to": "LS_1962_1000", "type": "references", "note": "상법"},
     {"from": "LS_1992_0449", "to": "LS_1999_0589", "type": "references", "note": "공정거래법"},
     {"from": "LS_1997_0549", "to": "LS_1997_0543", "type": "references", "note": "교육기본법"},
-    {"from": "LS_1997_0549", "to": "LS_1969_0424", "type": "references", "note": "사립학교법"}
+    {"from": "LS_1997_0549", "to": "LS_1969_0424", "type": "references", "note": "사립학교법"},
+
+    {"from": "LS_1948_0001", "to": "LS_1961_0726", "type": "parent", "article": "제39조"},
+    {"from": "LS_1948_0001", "to": "LS_1961_0866", "type": "parent", "article": "제119조"},
+    {"from": "LS_1948_0001", "to": "LS_1961_0895", "type": "parent", "article": "제35조"},
+    {"from": "LS_1948_0001", "to": "LS_1961_0903", "type": "parent", "article": "제119조"},
+    {"from": "LS_1948_0001", "to": "LS_1963_0084", "type": "parent", "article": "제27조"},
+
+    {"from": "LS_1961_0866", "to": "LS_1962_0559", "type": "references", "note": "도로교통법"},
+    {"from": "LS_1961_0895", "to": "LS_1960_0103", "type": "references", "note": "주택법"},
+    {"from": "LS_1963_0084", "to": "LS_1960_0472", "type": "references", "note": "민법"}
   ],
   "law_hierarchy": {
     "0": {"name": "헌법", "types": ["constitution"]},
