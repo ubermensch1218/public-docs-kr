@@ -1,20 +1,30 @@
 {
   "metadata": {
     "description": "GovKR-MD 법령 관계 그래프",
-    "version": "2.1.0",
+    "version": "2.2.0",
     "updated": "2026-03-09",
     "source": "https://law.go.kr",
     "stats": {
-      "nodes": 103,
-      "edges": 145
+      "nodes": 113,
+      "edges": 160
     }
   },
   "nodes": [
     {"id": "LS_1948_0001", "title": "대한민국 헌법", "type": "constitution", "level": 0},
 
     {"id": "LS_1949_0033", "title": "국세기본법", "type": "law", "level": 1},
+    {"id": "LS_1953_0286", "title": "근로기준법", "type": "law", "level": 1},
     {"id": "LS_1953_0293", "title": "형법", "type": "law", "level": 1},
+    {"id": "LS_1960_0103", "title": "주택법", "type": "law", "level": 1},
     {"id": "LS_1960_0472", "title": "민법", "type": "law", "level": 1},
+    {"id": "LS_1961_0821", "title": "건축법", "type": "law", "level": 1},
+    {"id": "LS_1961_0858", "title": "국세기본법", "type": "law", "level": 1},
+    {"id": "LS_1961_0924", "title": "여신전문금융업법", "type": "law", "level": 1},
+    {"id": "LS_1962_0538", "title": "저작권법", "type": "law", "level": 1},
+    {"id": "LS_1962_0559", "title": "도로교통법", "type": "law", "level": 1},
+    {"id": "LS_1978_0304", "title": "공인회계사법", "type": "law", "level": 1},
+    {"id": "LS_1992_0449", "title": "중소기업기본법", "type": "law", "level": 1},
+    {"id": "LS_1997_0549", "title": "고등교육법", "type": "law", "level": 1},
     {"id": "LS_1961_0385", "title": "식품위생법", "type": "law", "level": 1},
     {"id": "LS_1961_0456", "title": "소방기본법", "type": "law", "level": 1},
     {"id": "LS_1961_0734", "title": "부가가치세법", "type": "law", "level": 1},
@@ -177,7 +187,33 @@
     {"from": "LS_2005_0758", "to": "LS_1997_0800", "type": "references", "note": "특허법"},
     {"from": "LS_1984_0372", "to": "LS_1962_0526", "type": "references", "note": "건축법"},
     {"from": "LS_1995_0491", "to": "LS_1997_0530", "type": "references", "note": "근로기준"},
-    {"from": "LS_1993_0457", "to": "LS_1995_0496", "type": "references", "note": "물환경보전"}
+    {"from": "LS_1993_0457", "to": "LS_1995_0496", "type": "references", "note": "물환경보전"},
+
+    {"from": "LS_1948_0001", "to": "LS_1953_0286", "type": "parent", "article": "제32조"},
+    {"from": "LS_1948_0001", "to": "LS_1960_0103", "type": "parent", "article": "제35조"},
+    {"from": "LS_1948_0001", "to": "LS_1961_0821", "type": "parent", "article": "제119조"},
+    {"from": "LS_1948_0001", "to": "LS_1961_0858", "type": "parent", "article": "제38조"},
+    {"from": "LS_1948_0001", "to": "LS_1961_0924", "type": "parent", "article": "제119조"},
+    {"from": "LS_1948_0001", "to": "LS_1962_0538", "type": "parent", "article": "제22조"},
+    {"from": "LS_1948_0001", "to": "LS_1962_0559", "type": "parent", "article": "제12조"},
+    {"from": "LS_1948_0001", "to": "LS_1978_0304", "type": "parent", "article": "제119조"},
+    {"from": "LS_1948_0001", "to": "LS_1992_0449", "type": "parent", "article": "제119조"},
+    {"from": "LS_1948_0001", "to": "LS_1997_0549", "type": "parent", "article": "제31조"},
+
+    {"from": "LS_1953_0286", "to": "LS_2020_16890", "type": "references", "note": "노동조합법"},
+    {"from": "LS_1960_0103", "to": "LS_1961_0821", "type": "references", "note": "건축법"},
+    {"from": "LS_1961_0821", "to": "LS_2003_0695", "type": "references", "note": "주택법"},
+    {"from": "LS_1961_0858", "to": "LS_1961_0736", "type": "references", "note": "소득세법"},
+    {"from": "LS_1961_0858", "to": "LS_1961_0734", "type": "references", "note": "부가가치세법"},
+    {"from": "LS_1961_0858", "to": "LS_1967_0542", "type": "references", "note": "법인세법"},
+    {"from": "LS_1961_0924", "to": "LS_2017_14678", "type": "references", "note": "은행법"},
+    {"from": "LS_1961_0924", "to": "LS_2014_12737", "type": "references", "note": "신용정보법"},
+    {"from": "LS_1962_0538", "to": "LS_2005_0763", "type": "references", "note": "콘텐츠산업"},
+    {"from": "LS_1962_0559", "to": "LS_2017_14789", "type": "references", "note": "자동차손해배상법"},
+    {"from": "LS_1978_0304", "to": "LS_1962_1000", "type": "references", "note": "상법"},
+    {"from": "LS_1992_0449", "to": "LS_1999_0589", "type": "references", "note": "공정거래법"},
+    {"from": "LS_1997_0549", "to": "LS_1997_0543", "type": "references", "note": "교육기본법"},
+    {"from": "LS_1997_0549", "to": "LS_1969_0424", "type": "references", "note": "사립학교법"}
   ],
   "law_hierarchy": {
     "0": {"name": "헌법", "types": ["constitution"]},
