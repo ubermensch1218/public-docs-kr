@@ -1,12 +1,12 @@
 {
   "metadata": {
     "description": "GovKR-MD 법령 관계 그래프",
-    "version": "2.9.0",
+    "version": "3.0.0",
     "updated": "2026-03-09",
     "source": "https://law.go.kr",
     "stats": {
-      "nodes": 147,
-      "edges": 250
+      "nodes": 152,
+      "edges": 270
     }
   },
   "nodes": [
@@ -129,6 +129,11 @@
     {"id": "LS_1971_0001", "title": "택지개발촉진법", "type": "law", "level": 1},
     {"id": "LS_1972_0001", "title": "국토이용관리법", "type": "law", "level": 1},
     {"id": "LS_1974_0001", "title": "건설기본법", "type": "law", "level": 1},
+    {"id": "LS_1980_0001", "title": "은행법", "type": "law", "level": 1},
+    {"id": "LS_1982_0001", "title": "보험업법", "type": "law", "level": 1},
+    {"id": "LS_1983_0001", "title": "자본시장법", "type": "law", "level": 1},
+    {"id": "LS_1984_0001", "title": "신용정보법", "type": "law", "level": 1},
+    {"id": "LS_1985_0001", "title": "여신전문금융업법", "type": "law", "level": 1},
 
     {"id": "DC_1961_0789", "title": "도로교통법 시행령", "type": "decree", "level": 2, "parent": "LS_1961_0789"},
     {"id": "DC_1997_0530", "title": "근로기준법 시행령", "type": "decree", "level": 2, "parent": "LS_1997_0530"},
@@ -331,7 +336,24 @@
     {"from": "LS_1971_0001", "to": "LS_1972_0001", "type": "references", "note": "국토이용관리법"},
     {"from": "LS_1972_0001", "to": "LS_1966_0001", "type": "references", "note": "도시계획법"},
     {"from": "LS_1974_0001", "to": "LS_1961_0821", "type": "references", "note": "건축법"},
-    {"from": "LS_1974_0001", "to": "LS_2006_0754", "type": "references", "note": "산업안전보건법"}
+    {"from": "LS_1974_0001", "to": "LS_2006_0754", "type": "references", "note": "산업안전보건법"},
+
+    {"from": "LS_1948_0001", "to": "LS_1980_0001", "type": "parent", "article": "제119조"},
+    {"from": "LS_1948_0001", "to": "LS_1982_0001", "type": "parent", "article": "제119조"},
+    {"from": "LS_1948_0001", "to": "LS_1983_0001", "type": "parent", "article": "제119조"},
+    {"from": "LS_1948_0001", "to": "LS_1984_0001", "type": "parent", "article": "제17조, 제119조"},
+    {"from": "LS_1948_0001", "to": "LS_1985_0001", "type": "parent", "article": "제119조"},
+
+    {"from": "LS_1980_0001", "to": "LS_1983_0001", "type": "references", "note": "자본시장법"},
+    {"from": "LS_1980_0001", "to": "LS_1982_0001", "type": "references", "note": "보험업법"},
+    {"from": "LS_1982_0001", "to": "LS_1983_0001", "type": "references", "note": "자본시장법"},
+    {"from": "LS_1982_0001", "to": "LS_1962_1000", "type": "references", "note": "상법"},
+    {"from": "LS_1983_0001", "to": "LS_1962_1000", "type": "references", "note": "상법"},
+    {"from": "LS_1983_0001", "to": "LS_1980_0001", "type": "references", "note": "은행법"},
+    {"from": "LS_1984_0001", "to": "LS_2011_6258", "type": "references", "note": "개인정보보호법"},
+    {"from": "LS_1984_0001", "to": "LS_1980_0001", "type": "references", "note": "은행법"},
+    {"from": "LS_1985_0001", "to": "LS_1980_0001", "type": "references", "note": "은행법"},
+    {"from": "LS_1985_0001", "to": "LS_1984_0001", "type": "references", "note": "신용정보법"}
   ],
   "law_hierarchy": {
     "0": {"name": "헌법", "types": ["constitution"]},
