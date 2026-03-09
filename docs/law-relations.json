@@ -1,12 +1,12 @@
 {
   "metadata": {
     "description": "GovKR-MD 법령 관계 그래프",
-    "version": "2.4.0",
+    "version": "2.5.0",
     "updated": "2026-03-09",
     "source": "https://law.go.kr",
     "stats": {
-      "nodes": 123,
-      "edges": 180
+      "nodes": 128,
+      "edges": 190
     }
   },
   "nodes": [
@@ -35,6 +35,11 @@
     {"id": "LS_1961_0878", "title": "장애인복지법", "type": "law", "level": 1},
     {"id": "LS_1961_0889", "title": "옥외광고물등관리법", "type": "law", "level": 1},
     {"id": "LS_1961_0891", "title": "에너지이용합리화법", "type": "law", "level": 1},
+    {"id": "LS_1961_0853", "title": "유통산업발전법", "type": "law", "level": 1},
+    {"id": "LS_1961_0856", "title": "부패방지법", "type": "law", "level": 1},
+    {"id": "LS_1961_0859", "title": "지방세법", "type": "law", "level": 1},
+    {"id": "LS_1961_0862", "title": "식품등의표시광고법", "type": "law", "level": 1},
+    {"id": "LS_1961_0864", "title": "방송통신발전법", "type": "law", "level": 1},
     {"id": "LS_1961_0385", "title": "식품위생법", "type": "law", "level": 1},
     {"id": "LS_1961_0456", "title": "소방기본법", "type": "law", "level": 1},
     {"id": "LS_1961_0734", "title": "부가가치세법", "type": "law", "level": 1},
@@ -244,7 +249,19 @@
     {"from": "LS_1961_0871", "to": "LS_1962_0538", "type": "references", "note": "저작권법"},
     {"from": "LS_1961_0875", "to": "LS_1972_0237", "type": "references", "note": "환경정책기본법"},
     {"from": "LS_1961_0878", "to": "LS_2009_0976", "type": "references", "note": "장애인차별금지법"},
-    {"from": "LS_1961_0891", "to": "LS_1972_0237", "type": "references", "note": "환경정책기본법"}
+    {"from": "LS_1961_0891", "to": "LS_1972_0237", "type": "references", "note": "환경정책기본법"},
+
+    {"from": "LS_1948_0001", "to": "LS_1961_0853", "type": "parent", "article": "제119조"},
+    {"from": "LS_1948_0001", "to": "LS_1961_0856", "type": "parent", "article": "제8조"},
+    {"from": "LS_1948_0001", "to": "LS_1961_0859", "type": "parent", "article": "제38조"},
+    {"from": "LS_1948_0001", "to": "LS_1961_0862", "type": "parent", "article": "제36조"},
+    {"from": "LS_1948_0001", "to": "LS_1961_0864", "type": "parent", "article": "제21조"},
+
+    {"from": "LS_1961_0853", "to": "LS_1999_0589", "type": "references", "note": "공정거래법"},
+    {"from": "LS_1961_0856", "to": "LS_1980_0033", "type": "references", "note": "공무원법"},
+    {"from": "LS_1961_0859", "to": "LS_1961_0858", "type": "references", "note": "국세기본법"},
+    {"from": "LS_1961_0862", "to": "LS_1961_0385", "type": "references", "note": "식품위생법"},
+    {"from": "LS_1961_0864", "to": "LS_1996_0515", "type": "references", "note": "전기통신사업법"}
   ],
   "law_hierarchy": {
     "0": {"name": "헌법", "types": ["constitution"]},
