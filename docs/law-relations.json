@@ -1,12 +1,12 @@
 {
   "metadata": {
     "description": "GovKR-MD 법령 관계 그래프",
-    "version": "3.8.0",
+    "version": "3.9.0",
     "updated": "2026-03-09",
     "source": "https://law.go.kr",
     "stats": {
-      "nodes": 191,
-      "edges": 435
+      "nodes": 196,
+      "edges": 455
     }
   },
   "nodes": [
@@ -194,7 +194,13 @@
     {"id": "LS_2029_0001", "title": "민사소송법", "type": "law", "level": 1},
     {"id": "LS_2030_0001", "title": "주택임대차보호법", "type": "law", "level": 1},
     {"id": "LS_2031_0001", "title": "소비자기본법", "type": "law", "level": 1},
-    {"id": "LS_2032_0001", "title": "가망평가법", "type": "law", "level": 1}
+    {"id": "LS_2032_0001", "title": "가망평가법", "type": "law", "level": 1},
+
+    {"id": "LS_2033_0001", "title": "소득세법", "type": "law", "level": 1},
+    {"id": "LS_2034_0001", "title": "법인세법", "type": "law", "level": 1},
+    {"id": "LS_2035_0001", "title": "부가가치세법", "type": "law", "level": 1},
+    {"id": "LS_2036_0001", "title": "상속세및증여세법", "type": "law", "level": 1},
+    {"id": "LS_2037_0001", "title": "종합부동산세법", "type": "law", "level": 1}
   ],
   "edges": [
     {"from": "LS_1948_0001", "to": "LS_1953_0293", "type": "parent", "article": "제12조"},
@@ -525,7 +531,22 @@
     {"from": "LS_2029_0001", "to": "LS_2028_0001", "type": "references", "note": "민법"},
     {"from": "LS_2030_0001", "to": "LS_2028_0001", "type": "references", "note": "민법"},
     {"from": "LS_2031_0001", "to": "LS_2028_0001", "type": "references", "note": "민법"},
-    {"from": "LS_2032_0001", "to": "LS_2013_0001", "type": "references", "note": "행정기본법"}
+    {"from": "LS_2032_0001", "to": "LS_2013_0001", "type": "references", "note": "행정기본법"},
+
+    {"from": "LS_1948_0001", "to": "LS_2033_0001", "type": "parent", "article": "제38조"},
+    {"from": "LS_1948_0001", "to": "LS_2034_0001", "type": "parent", "article": "제38조"},
+    {"from": "LS_1948_0001", "to": "LS_2035_0001", "type": "parent", "article": "제38조"},
+    {"from": "LS_1948_0001", "to": "LS_2036_0001", "type": "parent", "article": "제38조"},
+    {"from": "LS_1948_0001", "to": "LS_2037_0001", "type": "parent", "article": "제38조"},
+
+    {"from": "LS_2033_0001", "to": "LS_1949_0033", "type": "references", "note": "국세기본법"},
+    {"from": "LS_2034_0001", "to": "LS_1949_0033", "type": "references", "note": "국세기본법"},
+    {"from": "LS_2035_0001", "to": "LS_1949_0033", "type": "references", "note": "국세기본법"},
+    {"from": "LS_2033_0001", "to": "LS_2034_0001", "type": "references", "note": "법인세법"},
+    {"from": "LS_2033_0001", "to": "LS_2035_0001", "type": "references", "note": "부가가치세법"},
+    {"from": "LS_2034_0001", "to": "LS_2033_0001", "type": "references", "note": "소득세법"},
+    {"from": "LS_2036_0001", "to": "LS_2028_0001", "type": "references", "note": "민법"},
+    {"from": "LS_2037_0001", "to": "LS_2013_12480", "type": "references", "note": "지방세법"}
   ],
   "law_hierarchy": {
     "0": {"name": "헌법", "types": ["constitution"]},
