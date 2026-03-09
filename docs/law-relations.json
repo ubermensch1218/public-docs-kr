@@ -1,12 +1,12 @@
 {
   "metadata": {
     "description": "GovKR-MD 법령 관계 그래프",
-    "version": "4.1.0",
+    "version": "4.2.0",
     "updated": "2026-03-09",
     "source": "https://law.go.kr",
     "stats": {
-      "nodes": 206,
-      "edges": 504
+      "nodes": 211,
+      "edges": 535
     }
   },
   "nodes": [
@@ -212,7 +212,13 @@
     {"id": "LS_2044_0001", "title": "건설기술 진흥법", "type": "law", "level": 1},
     {"id": "LS_2045_0001", "title": "주택법", "type": "law", "level": 1},
     {"id": "LS_2046_0001", "title": "국토계획법", "type": "law", "level": 1},
-    {"id": "LS_2047_0001", "title": "도시개발법", "type": "law", "level": 1}
+    {"id": "LS_2047_0001", "title": "도시개발법", "type": "law", "level": 1},
+
+    {"id": "LS_2048_0001", "title": "재난 및 안전관리 기본법", "type": "law", "level": 1},
+    {"id": "LS_2049_0001", "title": "소방시설법", "type": "law", "level": 1},
+    {"id": "LS_2050_0001", "title": "위험물안전관리법", "type": "law", "level": 1},
+    {"id": "LS_2051_0001", "title": "건설기계관리법", "type": "law", "level": 1},
+    {"id": "LS_2052_0001", "title": "교통안전법", "type": "law", "level": 1}
   ],
   "edges": [
     {"from": "LS_1948_0001", "to": "LS_1953_0293", "type": "parent", "article": "제12조"},
@@ -603,7 +609,38 @@
 
     {"from": "LS_2047_0001", "to": "LS_2046_0001", "type": "references", "note": "국토계획법"},
     {"from": "LS_2047_0001", "to": "LS_2045_0001", "type": "references", "note": "주택법"},
-    {"from": "LS_2047_0001", "to": "LS_2043_0001", "type": "references", "note": "건축법"}
+    {"from": "LS_2047_0001", "to": "LS_2043_0001", "type": "references", "note": "건축법"},
+
+    {"from": "LS_1948_0001", "to": "LS_2048_0001", "type": "parent", "article": "제34조"},
+    {"from": "LS_1948_0001", "to": "LS_2049_0001", "type": "parent", "article": "제34조"},
+    {"from": "LS_1948_0001", "to": "LS_2050_0001", "type": "parent", "article": "제34조"},
+    {"from": "LS_1948_0001", "to": "LS_2051_0001", "type": "parent", "article": "제119조"},
+    {"from": "LS_1948_0001", "to": "LS_2052_0001", "type": "parent", "article": "제12조"},
+
+    {"from": "LS_2048_0001", "to": "LS_1984_0372", "type": "references", "note": "소방기본법"},
+    {"from": "LS_2048_0001", "to": "LS_1974_0001", "type": "references", "note": "건설기본법"},
+    {"from": "LS_2048_0001", "to": "LS_2052_0001", "type": "references", "note": "교통안전법"},
+    {"from": "LS_2048_0001", "to": "LS_2050_0001", "type": "references", "note": "위험물안전관리법"},
+
+    {"from": "LS_2049_0001", "to": "LS_1984_0372", "type": "references", "note": "소방기본법"},
+    {"from": "LS_2049_0001", "to": "LS_2043_0001", "type": "references", "note": "건축법"},
+    {"from": "LS_2049_0001", "to": "LS_2048_0001", "type": "references", "note": "재난안전법"},
+    {"from": "LS_2049_0001", "to": "LS_2050_0001", "type": "references", "note": "위험물안전관리법"},
+
+    {"from": "LS_2050_0001", "to": "LS_1984_0372", "type": "references", "note": "소방기본법"},
+    {"from": "LS_2050_0001", "to": "LS_1961_0796", "type": "references", "note": "가스사업법"},
+    {"from": "LS_2050_0001", "to": "LS_1961_0793", "type": "references", "note": "석유사업법"},
+    {"from": "LS_2050_0001", "to": "LS_2049_0001", "type": "references", "note": "소방시설법"},
+
+    {"from": "LS_2051_0001", "to": "LS_1962_0559", "type": "references", "note": "도로교통법"},
+    {"from": "LS_2051_0001", "to": "LS_1974_0001", "type": "references", "note": "건설기본법"},
+    {"from": "LS_2051_0001", "to": "LS_2006_0754", "type": "references", "note": "산업안전보건법"},
+    {"from": "LS_2051_0001", "to": "LS_1961_0832", "type": "references", "note": "대기환경보전법"},
+
+    {"from": "LS_2052_0001", "to": "LS_1962_0559", "type": "references", "note": "도로교통법"},
+    {"from": "LS_2052_0001", "to": "LS_1961_0835", "type": "references", "note": "자동차관리법"},
+    {"from": "LS_2052_0001", "to": "LS_2048_0001", "type": "references", "note": "재난안전법"},
+    {"from": "LS_2052_0001", "to": "LS_2017_14789", "type": "references", "note": "자동차손해배상법"}
   ],
   "law_hierarchy": {
     "0": {"name": "헌법", "types": ["constitution"]},
