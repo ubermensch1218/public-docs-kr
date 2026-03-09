@@ -1,12 +1,12 @@
 {
   "metadata": {
     "description": "GovKR-MD 법령 관계 그래프",
-    "version": "2.8.0",
+    "version": "2.9.0",
     "updated": "2026-03-09",
     "source": "https://law.go.kr",
     "stats": {
-      "nodes": 142,
-      "edges": 230
+      "nodes": 147,
+      "edges": 250
     }
   },
   "nodes": [
@@ -124,6 +124,11 @@
     {"id": "LS_1961_0799", "title": "전기사업법", "type": "law", "level": 1},
     {"id": "LS_1961_0802", "title": "광업기본법", "type": "law", "level": 1},
     {"id": "LS_1961_0805", "title": "산림기본법", "type": "law", "level": 1},
+    {"id": "LS_1966_0001", "title": "도시계획법", "type": "law", "level": 1},
+    {"id": "LS_1966_0002", "title": "주택건설촉진법", "type": "law", "level": 1},
+    {"id": "LS_1971_0001", "title": "택지개발촉진법", "type": "law", "level": 1},
+    {"id": "LS_1972_0001", "title": "국토이용관리법", "type": "law", "level": 1},
+    {"id": "LS_1974_0001", "title": "건설기본법", "type": "law", "level": 1},
 
     {"id": "DC_1961_0789", "title": "도로교통법 시행령", "type": "decree", "level": 2, "parent": "LS_1961_0789"},
     {"id": "DC_1997_0530", "title": "근로기준법 시행령", "type": "decree", "level": 2, "parent": "LS_1997_0530"},
@@ -311,7 +316,22 @@
     {"from": "LS_1961_0799", "to": "LS_1961_0793", "type": "references", "note": "석유사업법"},
     {"from": "LS_1961_0799", "to": "LS_1961_0796", "type": "references", "note": "가스사업법"},
     {"from": "LS_1961_0802", "to": "LS_1961_0793", "type": "references", "note": "석유사업법"},
-    {"from": "LS_1961_0805", "to": "LS_1972_0237", "type": "references", "note": "환경정책기본법"}
+    {"from": "LS_1961_0805", "to": "LS_1972_0237", "type": "references", "note": "환경정책기본법"},
+
+    {"from": "LS_1948_0001", "to": "LS_1966_0001", "type": "parent", "article": "제35조"},
+    {"from": "LS_1948_0001", "to": "LS_1966_0002", "type": "parent", "article": "제35조"},
+    {"from": "LS_1948_0001", "to": "LS_1971_0001", "type": "parent", "article": "제35조"},
+    {"from": "LS_1948_0001", "to": "LS_1972_0001", "type": "parent", "article": "제120조"},
+    {"from": "LS_1948_0001", "to": "LS_1974_0001", "type": "parent", "article": "제119조"},
+
+    {"from": "LS_1966_0001", "to": "LS_1961_0821", "type": "references", "note": "건축법"},
+    {"from": "LS_1966_0001", "to": "LS_1972_0001", "type": "references", "note": "국토이용관리법"},
+    {"from": "LS_1966_0002", "to": "LS_1961_0821", "type": "references", "note": "건축법"},
+    {"from": "LS_1966_0002", "to": "LS_1966_0001", "type": "references", "note": "도시계획법"},
+    {"from": "LS_1971_0001", "to": "LS_1972_0001", "type": "references", "note": "국토이용관리법"},
+    {"from": "LS_1972_0001", "to": "LS_1966_0001", "type": "references", "note": "도시계획법"},
+    {"from": "LS_1974_0001", "to": "LS_1961_0821", "type": "references", "note": "건축법"},
+    {"from": "LS_1974_0001", "to": "LS_2006_0754", "type": "references", "note": "산업안전보건법"}
   ],
   "law_hierarchy": {
     "0": {"name": "헌법", "types": ["constitution"]},
