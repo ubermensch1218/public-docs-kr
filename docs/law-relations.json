@@ -1,12 +1,12 @@
 {
   "metadata": {
     "description": "GovKR-MD 법령 관계 그래프",
-    "version": "2.6.0",
+    "version": "2.7.0",
     "updated": "2026-03-09",
     "source": "https://law.go.kr",
     "stats": {
-      "nodes": 132,
-      "edges": 200
+      "nodes": 137,
+      "edges": 210
     }
   },
   "nodes": [
@@ -40,6 +40,11 @@
     {"id": "LS_1961_0859", "title": "지방세법", "type": "law", "level": 1},
     {"id": "LS_1961_0862", "title": "식품등의표시광고법", "type": "law", "level": 1},
     {"id": "LS_1961_0864", "title": "방송통신발전법", "type": "law", "level": 1},
+    {"id": "LS_1961_0823", "title": "폐기물관리법", "type": "law", "level": 1},
+    {"id": "LS_1961_0826", "title": "소음진동규제법", "type": "law", "level": 1},
+    {"id": "LS_1961_0829", "title": "수질환경보전법", "type": "law", "level": 1},
+    {"id": "LS_1961_0832", "title": "대기환경보전법", "type": "law", "level": 1},
+    {"id": "LS_1961_0835", "title": "자동차관리법", "type": "law", "level": 1},
     {"id": "LS_1961_0838", "title": "산업재해보상보험법", "type": "law", "level": 1},
     {"id": "LS_1961_0841", "title": "고용보험법", "type": "law", "level": 1},
     {"id": "LS_1961_0844", "title": "국민연금법", "type": "law", "level": 1},
@@ -275,7 +280,18 @@
     {"from": "LS_1961_0838", "to": "LS_1953_0286", "type": "references", "note": "근로기준법"},
     {"from": "LS_1961_0841", "to": "LS_1953_0286", "type": "references", "note": "근로기준법"},
     {"from": "LS_1961_0844", "to": "LS_1961_0847", "type": "references", "note": "건강보험"},
-    {"from": "LS_1961_0847", "to": "LS_1976_0885", "type": "references", "note": "의료법"}
+    {"from": "LS_1961_0847", "to": "LS_1976_0885", "type": "references", "note": "의료법"},
+
+    {"from": "LS_1948_0001", "to": "LS_1961_0823", "type": "parent", "article": "제35조"},
+    {"from": "LS_1948_0001", "to": "LS_1961_0826", "type": "parent", "article": "제35조"},
+    {"from": "LS_1948_0001", "to": "LS_1961_0829", "type": "parent", "article": "제35조"},
+    {"from": "LS_1948_0001", "to": "LS_1961_0832", "type": "parent", "article": "제35조"},
+    {"from": "LS_1948_0001", "to": "LS_1961_0835", "type": "parent", "article": "제119조"},
+
+    {"from": "LS_1961_0823", "to": "LS_1972_0237", "type": "references", "note": "환경정책기본법"},
+    {"from": "LS_1961_0829", "to": "LS_1972_0237", "type": "references", "note": "환경정책기본법"},
+    {"from": "LS_1961_0832", "to": "LS_1972_0237", "type": "references", "note": "환경정책기본법"},
+    {"from": "LS_1961_0835", "to": "LS_1962_0559", "type": "references", "note": "도로교통법"}
   ],
   "law_hierarchy": {
     "0": {"name": "헌법", "types": ["constitution"]},
