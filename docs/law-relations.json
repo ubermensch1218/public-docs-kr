@@ -1,12 +1,12 @@
 {
   "metadata": {
     "description": "GovKR-MD 법령 관계 그래프",
-    "version": "3.1.0",
+    "version": "3.2.0",
     "updated": "2026-03-09",
     "source": "https://law.go.kr",
     "stats": {
-      "nodes": 157,
-      "edges": 290
+      "nodes": 161,
+      "edges": 310
     }
   },
   "nodes": [
@@ -139,6 +139,10 @@
     {"id": "LS_1993_0001", "title": "평생교육법", "type": "law", "level": 1},
     {"id": "LS_1994_0001", "title": "사립학교법", "type": "law", "level": 1},
     {"id": "LS_1995_0001", "title": "특수교육법", "type": "law", "level": 1},
+    {"id": "LS_1996_0001", "title": "전자거래법", "type": "law", "level": 1},
+    {"id": "LS_1997_0001", "title": "정보통신망법", "type": "law", "level": 1},
+    {"id": "LS_1998_0001", "title": "소비자기본법", "type": "law", "level": 1},
+    {"id": "LS_1999_0001", "title": "전자상거래법", "type": "law", "level": 1},
 
     {"id": "DC_1961_0789", "title": "도로교통법 시행령", "type": "decree", "level": 2, "parent": "LS_1961_0789"},
     {"id": "DC_1997_0530", "title": "근로기준법 시행령", "type": "decree", "level": 2, "parent": "LS_1997_0530"},
@@ -376,7 +380,20 @@
     {"from": "LS_1994_0001", "to": "LS_1992_0001", "type": "references", "note": "고등교육법"},
     {"from": "LS_1995_0001", "to": "LS_1997_0543", "type": "references", "note": "교육기본법"},
     {"from": "LS_1995_0001", "to": "LS_1961_0878", "type": "references", "note": "장애인복지법"},
-    {"from": "LS_1995_0001", "to": "LS_2009_0976", "type": "references", "note": "장애인차별금지법"}
+    {"from": "LS_1995_0001", "to": "LS_2009_0976", "type": "references", "note": "장애인차별금지법"},
+
+    {"from": "LS_1948_0001", "to": "LS_1996_0001", "type": "parent", "article": "제23조"},
+    {"from": "LS_1948_0001", "to": "LS_1997_0001", "type": "parent", "article": "제18조"},
+    {"from": "LS_1948_0001", "to": "LS_1998_0001", "type": "parent", "article": "제23조"},
+    {"from": "LS_1948_0001", "to": "LS_1999_0001", "type": "parent", "article": "제119조"},
+
+    {"from": "LS_1996_0001", "to": "LS_2011_6258", "type": "references", "note": "개인정보보호법"},
+    {"from": "LS_1996_0001", "to": "LS_2006_0789", "type": "references", "note": "전자거래법"},
+    {"from": "LS_1997_0001", "to": "LS_2011_6258", "type": "references", "note": "개인정보보호법"},
+    {"from": "LS_1997_0001", "to": "LS_2011_0658", "type": "references", "note": "정보통신망법"},
+    {"from": "LS_1998_0001", "to": "LS_1960_0472", "type": "references", "note": "민법"},
+    {"from": "LS_1999_0001", "to": "LS_1996_0001", "type": "references", "note": "전자거래법"},
+    {"from": "LS_1999_0001", "to": "LS_1998_0001", "type": "references", "note": "소비자기본법"}
   ],
   "law_hierarchy": {
     "0": {"name": "헌법", "types": ["constitution"]},
