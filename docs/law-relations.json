@@ -1,12 +1,12 @@
 {
   "metadata": {
     "description": "GovKR-MD 법령 관계 그래프",
-    "version": "3.4.0",
+    "version": "3.5.0",
     "updated": "2026-03-09",
     "source": "https://law.go.kr",
     "stats": {
-      "nodes": 171,
-      "edges": 350
+      "nodes": 176,
+      "edges": 370
     }
   },
   "nodes": [
@@ -170,7 +170,13 @@
     {"id": "LS_2009_0001", "title": "근로기준법", "type": "law", "level": 1},
     {"id": "LS_2010_0001", "title": "산업안전보건법", "type": "law", "level": 1},
     {"id": "LS_2011_0001", "title": "고용보험법", "type": "law", "level": 1},
-    {"id": "LS_2012_0001", "title": "산업재해보상보험법", "type": "law", "level": 1}
+    {"id": "LS_2012_0001", "title": "산업재해보상보험법", "type": "law", "level": 1},
+
+    {"id": "LS_2013_0001", "title": "행정기본법", "type": "law", "level": 1},
+    {"id": "LS_2014_0001", "title": "국가공무원법", "type": "law", "level": 1},
+    {"id": "LS_2015_0001", "title": "지방자치법", "type": "law", "level": 1},
+    {"id": "LS_2016_0001", "title": "정보공개법", "type": "law", "level": 1},
+    {"id": "LS_2017_0001", "title": "공공데이터법", "type": "law", "level": 1}
   ],
   "edges": [
     {"from": "LS_1948_0001", "to": "LS_1953_0293", "type": "parent", "article": "제12조"},
@@ -442,7 +448,22 @@
     {"from": "LS_2011_0001", "to": "LS_2012_0001", "type": "references", "note": "산업재해보상보험법"},
     {"from": "LS_2012_0001", "to": "LS_2009_0001", "type": "references", "note": "근로기준법"},
     {"from": "LS_2012_0001", "to": "LS_2010_0001", "type": "references", "note": "산업안전보건법"},
-    {"from": "LS_2012_0001", "to": "LS_2011_0001", "type": "references", "note": "고용보험법"}
+    {"from": "LS_2012_0001", "to": "LS_2011_0001", "type": "references", "note": "고용보험법"},
+
+    {"from": "LS_1948_0001", "to": "LS_2013_0001", "type": "parent", "article": "제1조, 제2조"},
+    {"from": "LS_1948_0001", "to": "LS_2014_0001", "type": "parent", "article": "제7조"},
+    {"from": "LS_1948_0001", "to": "LS_2015_0001", "type": "parent", "article": "제117조, 제118조"},
+    {"from": "LS_1948_0001", "to": "LS_2016_0001", "type": "parent", "article": "제21조"},
+    {"from": "LS_1948_0001", "to": "LS_2017_0001", "type": "parent", "article": "제21조"},
+
+    {"from": "LS_2013_0001", "to": "LS_2016_0001", "type": "references", "note": "정보공개법"},
+    {"from": "LS_2014_0001", "to": "LS_2013_0001", "type": "references", "note": "행정기본법"},
+    {"from": "LS_2015_0001", "to": "LS_2013_0001", "type": "references", "note": "행정기본법"},
+    {"from": "LS_2015_0001", "to": "LS_2014_0001", "type": "references", "note": "국가공무원법"},
+    {"from": "LS_2016_0001", "to": "LS_2011_6258", "type": "references", "note": "개인정보보호법"},
+    {"from": "LS_2016_0001", "to": "LS_2017_0001", "type": "references", "note": "공공데이터법"},
+    {"from": "LS_2017_0001", "to": "LS_2016_0001", "type": "references", "note": "정보공개법"},
+    {"from": "LS_2017_0001", "to": "LS_2011_6258", "type": "references", "note": "개인정보보호법"}
   ],
   "law_hierarchy": {
     "0": {"name": "헌법", "types": ["constitution"]},
