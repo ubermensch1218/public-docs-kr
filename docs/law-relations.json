@@ -1,12 +1,12 @@
 {
   "metadata": {
     "description": "GovKR-MD 법령 관계 그래프",
-    "version": "3.5.0",
+    "version": "3.6.0",
     "updated": "2026-03-09",
     "source": "https://law.go.kr",
     "stats": {
-      "nodes": 176,
-      "edges": 370
+      "nodes": 181,
+      "edges": 395
     }
   },
   "nodes": [
@@ -176,7 +176,13 @@
     {"id": "LS_2014_0001", "title": "국가공무원법", "type": "law", "level": 1},
     {"id": "LS_2015_0001", "title": "지방자치법", "type": "law", "level": 1},
     {"id": "LS_2016_0001", "title": "정보공개법", "type": "law", "level": 1},
-    {"id": "LS_2017_0001", "title": "공공데이터법", "type": "law", "level": 1}
+    {"id": "LS_2017_0001", "title": "공공데이터법", "type": "law", "level": 1},
+
+    {"id": "LS_2018_0001", "title": "국민기초생활 보장법", "type": "law", "level": 1},
+    {"id": "LS_2019_0001", "title": "장애인복지법", "type": "law", "level": 1},
+    {"id": "LS_2020_0001", "title": "노인복지법", "type": "law", "level": 1},
+    {"id": "LS_2021_0001", "title": "아동복지법", "type": "law", "level": 1},
+    {"id": "LS_2022_0001", "title": "한부모가족지원법", "type": "law", "level": 1}
   ],
   "edges": [
     {"from": "LS_1948_0001", "to": "LS_1953_0293", "type": "parent", "article": "제12조"},
@@ -463,7 +469,23 @@
     {"from": "LS_2016_0001", "to": "LS_2011_6258", "type": "references", "note": "개인정보보호법"},
     {"from": "LS_2016_0001", "to": "LS_2017_0001", "type": "references", "note": "공공데이터법"},
     {"from": "LS_2017_0001", "to": "LS_2016_0001", "type": "references", "note": "정보공개법"},
-    {"from": "LS_2017_0001", "to": "LS_2011_6258", "type": "references", "note": "개인정보보호법"}
+    {"from": "LS_2017_0001", "to": "LS_2011_6258", "type": "references", "note": "개인정보보호법"},
+
+    {"from": "LS_1948_0001", "to": "LS_2018_0001", "type": "parent", "article": "제34조"},
+    {"from": "LS_1948_0001", "to": "LS_2019_0001", "type": "parent", "article": "제34조"},
+    {"from": "LS_1948_0001", "to": "LS_2020_0001", "type": "parent", "article": "제34조"},
+    {"from": "LS_1948_0001", "to": "LS_2021_0001", "type": "parent", "article": "제34조"},
+    {"from": "LS_1948_0001", "to": "LS_2022_0001", "type": "parent", "article": "제34조"},
+
+    {"from": "LS_2018_0001", "to": "LS_1963_0086", "type": "references", "note": "사회복지사업법"},
+    {"from": "LS_2018_0001", "to": "LS_2002_0001", "type": "references", "note": "국민건강보험법"},
+    {"from": "LS_2019_0001", "to": "LS_2009_0976", "type": "references", "note": "장애인차별금지법"},
+    {"from": "LS_2019_0001", "to": "LS_2003_0001", "type": "references", "note": "국민연금법"},
+    {"from": "LS_2020_0001", "to": "LS_2003_0001", "type": "references", "note": "국민연금법"},
+    {"from": "LS_2020_0001", "to": "LS_2002_0001", "type": "references", "note": "국민건강보험법"},
+    {"from": "LS_2021_0001", "to": "LS_1960_0472", "type": "references", "note": "민법"},
+    {"from": "LS_2022_0001", "to": "LS_2021_0001", "type": "references", "note": "아동복지법"},
+    {"from": "LS_2022_0001", "to": "LS_2018_0001", "type": "references", "note": "기초생활보장법"}
   ],
   "law_hierarchy": {
     "0": {"name": "헌법", "types": ["constitution"]},
