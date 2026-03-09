@@ -1,12 +1,12 @@
 {
   "metadata": {
     "description": "GovKR-MD 법령 관계 그래프",
-    "version": "3.3.0",
+    "version": "3.4.0",
     "updated": "2026-03-09",
     "source": "https://law.go.kr",
     "stats": {
-      "nodes": 166,
-      "edges": 330
+      "nodes": 171,
+      "edges": 350
     }
   },
   "nodes": [
@@ -164,7 +164,13 @@
     {"id": "DC_2008_0889", "title": "게임산업진흥법 시행령", "type": "decree", "level": 2, "parent": "LS_2008_0889"},
     {"id": "DC_2010_10319", "title": "자원순환법 시행령", "type": "decree", "level": 2, "parent": "LS_2010_10319"},
 
-    {"id": "RC_2011_6258", "title": "개인정보 보호법 시행규칙", "type": "rule", "level": 3, "parent": "DC_2011_6258"}
+    {"id": "RC_2011_6258", "title": "개인정보 보호법 시행규칙", "type": "rule", "level": 3, "parent": "DC_2011_6258"},
+
+    {"id": "LS_2008_0001", "title": "최저임금법", "type": "law", "level": 1},
+    {"id": "LS_2009_0001", "title": "근로기준법", "type": "law", "level": 1},
+    {"id": "LS_2010_0001", "title": "산업안전보건법", "type": "law", "level": 1},
+    {"id": "LS_2011_0001", "title": "고용보험법", "type": "law", "level": 1},
+    {"id": "LS_2012_0001", "title": "산업재해보상보험법", "type": "law", "level": 1}
   ],
   "edges": [
     {"from": "LS_1948_0001", "to": "LS_1953_0293", "type": "parent", "article": "제12조"},
@@ -415,7 +421,28 @@
     {"from": "LS_2003_0001", "to": "LS_2002_0001", "type": "references", "note": "국민건강보험법"},
     {"from": "LS_2003_0001", "to": "LS_1953_0286", "type": "references", "note": "근로기준법"},
     {"from": "LS_2004_0001", "to": "LS_2000_0001", "type": "references", "note": "의료법"},
-    {"from": "LS_2004_0001", "to": "LS_2002_0001", "type": "references", "note": "국민건강보험법"}
+    {"from": "LS_2004_0001", "to": "LS_2002_0001", "type": "references", "note": "국민건강보험법"},
+
+    {"from": "LS_1948_0001", "to": "LS_2008_0001", "type": "parent", "article": "제32조, 제34조"},
+    {"from": "LS_1948_0001", "to": "LS_2009_0001", "type": "parent", "article": "제32조, 제34조"},
+    {"from": "LS_1948_0001", "to": "LS_2010_0001", "type": "parent", "article": "제34조"},
+    {"from": "LS_1948_0001", "to": "LS_2011_0001", "type": "parent", "article": "제32조, 제34조"},
+    {"from": "LS_1948_0001", "to": "LS_2012_0001", "type": "parent", "article": "제34조"},
+
+    {"from": "LS_2008_0001", "to": "LS_2009_0001", "type": "references", "note": "근로기준법"},
+    {"from": "LS_2009_0001", "to": "LS_2008_0001", "type": "references", "note": "최저임금법"},
+    {"from": "LS_2009_0001", "to": "LS_2010_0001", "type": "references", "note": "산업안전보건법"},
+    {"from": "LS_2009_0001", "to": "LS_2012_0001", "type": "references", "note": "산업재해보상보험법"},
+    {"from": "LS_2009_0001", "to": "LS_2011_0001", "type": "references", "note": "고용보험법"},
+    {"from": "LS_2010_0001", "to": "LS_2009_0001", "type": "references", "note": "근로기준법"},
+    {"from": "LS_2010_0001", "to": "LS_2011_10974", "type": "references", "note": "중대재해처벌법"},
+    {"from": "LS_2010_0001", "to": "LS_2012_0001", "type": "references", "note": "산업재해보상보험법"},
+    {"from": "LS_2011_0001", "to": "LS_2009_0001", "type": "references", "note": "근로기준법"},
+    {"from": "LS_2011_0001", "to": "LS_2003_0001", "type": "references", "note": "국민연금법"},
+    {"from": "LS_2011_0001", "to": "LS_2012_0001", "type": "references", "note": "산업재해보상보험법"},
+    {"from": "LS_2012_0001", "to": "LS_2009_0001", "type": "references", "note": "근로기준법"},
+    {"from": "LS_2012_0001", "to": "LS_2010_0001", "type": "references", "note": "산업안전보건법"},
+    {"from": "LS_2012_0001", "to": "LS_2011_0001", "type": "references", "note": "고용보험법"}
   ],
   "law_hierarchy": {
     "0": {"name": "헌법", "types": ["constitution"]},
