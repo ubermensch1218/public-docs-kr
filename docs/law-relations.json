@@ -1,12 +1,12 @@
 {
   "metadata": {
     "description": "GovKR-MD 법령 관계 그래프",
-    "version": "3.9.0",
+    "version": "4.0.0",
     "updated": "2026-03-09",
     "source": "https://law.go.kr",
     "stats": {
-      "nodes": 196,
-      "edges": 455
+      "nodes": 201,
+      "edges": 475
     }
   },
   "nodes": [
@@ -200,7 +200,13 @@
     {"id": "LS_2034_0001", "title": "법인세법", "type": "law", "level": 1},
     {"id": "LS_2035_0001", "title": "부가가치세법", "type": "law", "level": 1},
     {"id": "LS_2036_0001", "title": "상속세및증여세법", "type": "law", "level": 1},
-    {"id": "LS_2037_0001", "title": "종합부동산세법", "type": "law", "level": 1}
+    {"id": "LS_2037_0001", "title": "종합부동산세법", "type": "law", "level": 1},
+
+    {"id": "LS_2038_0001", "title": "특허법", "type": "law", "level": 1},
+    {"id": "LS_2039_0001", "title": "저작권법", "type": "law", "level": 1},
+    {"id": "LS_2040_0001", "title": "상표법", "type": "law", "level": 1},
+    {"id": "LS_2041_0001", "title": "디자인보호법", "type": "law", "level": 1},
+    {"id": "LS_2042_0001", "title": "부정경쟁방지법", "type": "law", "level": 1}
   ],
   "edges": [
     {"from": "LS_1948_0001", "to": "LS_1953_0293", "type": "parent", "article": "제12조"},
@@ -546,7 +552,24 @@
     {"from": "LS_2033_0001", "to": "LS_2035_0001", "type": "references", "note": "부가가치세법"},
     {"from": "LS_2034_0001", "to": "LS_2033_0001", "type": "references", "note": "소득세법"},
     {"from": "LS_2036_0001", "to": "LS_2028_0001", "type": "references", "note": "민법"},
-    {"from": "LS_2037_0001", "to": "LS_2013_12480", "type": "references", "note": "지방세법"}
+    {"from": "LS_2037_0001", "to": "LS_2013_12480", "type": "references", "note": "지방세법"},
+
+    {"from": "LS_1948_0001", "to": "LS_2038_0001", "type": "parent", "article": "제22조"},
+    {"from": "LS_1948_0001", "to": "LS_2039_0001", "type": "parent", "article": "제22조"},
+    {"from": "LS_1948_0001", "to": "LS_2040_0001", "type": "parent", "article": "제22조"},
+    {"from": "LS_1948_0001", "to": "LS_2041_0001", "type": "parent", "article": "제22조"},
+    {"from": "LS_1948_0001", "to": "LS_2042_0001", "type": "parent", "article": "제22조"},
+
+    {"from": "LS_2038_0001", "to": "LS_2039_0001", "type": "references", "note": "저작권법"},
+    {"from": "LS_2038_0001", "to": "LS_2040_0001", "type": "references", "note": "상표법"},
+    {"from": "LS_2039_0001", "to": "LS_2038_0001", "type": "references", "note": "특허법"},
+    {"from": "LS_2039_0001", "to": "LS_2042_0001", "type": "references", "note": "부정경쟁방지법"},
+    {"from": "LS_2040_0001", "to": "LS_2038_0001", "type": "references", "note": "특허법"},
+    {"from": "LS_2040_0001", "to": "LS_2041_0001", "type": "references", "note": "디자인보호법"},
+    {"from": "LS_2041_0001", "to": "LS_2038_0001", "type": "references", "note": "특허법"},
+    {"from": "LS_2041_0001", "to": "LS_2040_0001", "type": "references", "note": "상표법"},
+    {"from": "LS_2042_0001", "to": "LS_2038_0001", "type": "references", "note": "특허법"},
+    {"from": "LS_2042_0001", "to": "LS_2039_0001", "type": "references", "note": "저작권법"}
   ],
   "law_hierarchy": {
     "0": {"name": "헌법", "types": ["constitution"]},
