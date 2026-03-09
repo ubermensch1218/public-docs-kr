@@ -1,12 +1,12 @@
 {
   "metadata": {
     "description": "GovKR-MD 법령 관계 그래프",
-    "version": "4.3.0",
+    "version": "4.4.0",
     "updated": "2026-03-09",
     "source": "https://law.go.kr",
     "stats": {
-      "nodes": 216,
-      "edges": 565
+      "nodes": 221,
+      "edges": 595
     }
   },
   "nodes": [
@@ -224,7 +224,13 @@
     {"id": "LS_2054_0001", "title": "영유아보육법", "type": "law", "level": 1},
     {"id": "LS_2055_0001", "title": "문화재보호법", "type": "law", "level": 1},
     {"id": "LS_2056_0001", "title": "관광진흥법", "type": "law", "level": 1},
-    {"id": "LS_2057_0001", "title": "체육시설법", "type": "law", "level": 1}
+    {"id": "LS_2057_0001", "title": "체육시설법", "type": "law", "level": 1},
+
+    {"id": "LS_2058_0001", "title": "식품위생법", "type": "law", "level": 1},
+    {"id": "LS_2059_0001", "title": "건강기능식품법", "type": "law", "level": 1},
+    {"id": "LS_2060_0001", "title": "의료기기법", "type": "law", "level": 1},
+    {"id": "LS_2061_0001", "title": "화장품법", "type": "law", "level": 1},
+    {"id": "LS_2062_0001", "title": "혈액관리법", "type": "law", "level": 1}
   ],
   "edges": [
     {"from": "LS_1948_0001", "to": "LS_1953_0293", "type": "parent", "article": "제12조"},
@@ -668,7 +674,29 @@
     {"from": "LS_2056_0001", "to": "LS_2055_0001", "type": "references", "note": "문화재보호법"},
 
     {"from": "LS_2057_0001", "to": "LS_2043_0001", "type": "references", "note": "건축법"},
-    {"from": "LS_2057_0001", "to": "LS_1984_0372", "type": "references", "note": "소방기본법"}
+    {"from": "LS_2057_0001", "to": "LS_1984_0372", "type": "references", "note": "소방기본법"},
+
+    {"from": "LS_1948_0001", "to": "LS_2058_0001", "type": "parent", "article": "제36조"},
+    {"from": "LS_1948_0001", "to": "LS_2059_0001", "type": "parent", "article": "제36조"},
+    {"from": "LS_1948_0001", "to": "LS_2060_0001", "type": "parent", "article": "제36조"},
+    {"from": "LS_1948_0001", "to": "LS_2061_0001", "type": "parent", "article": "제36조"},
+    {"from": "LS_1948_0001", "to": "LS_2062_0001", "type": "parent", "article": "제36조"},
+
+    {"from": "LS_2058_0001", "to": "LS_2000_0001", "type": "references", "note": "의료법"},
+    {"from": "LS_2058_0001", "to": "LS_2059_0001", "type": "references", "note": "건강기능식품법"},
+
+    {"from": "LS_2059_0001", "to": "LS_2058_0001", "type": "references", "note": "식품위생법"},
+    {"from": "LS_2059_0001", "to": "LS_2001_0001", "type": "references", "note": "약사법"},
+    {"from": "LS_2059_0001", "to": "LS_2060_0001", "type": "references", "note": "의료기기법"},
+
+    {"from": "LS_2060_0001", "to": "LS_2000_0001", "type": "references", "note": "의료법"},
+    {"from": "LS_2060_0001", "to": "LS_2061_0001", "type": "references", "note": "화장품법"},
+
+    {"from": "LS_2061_0001", "to": "LS_2060_0001", "type": "references", "note": "의료기기법"},
+    {"from": "LS_2061_0001", "to": "LS_2059_0001", "type": "references", "note": "건강기능식품법"},
+
+    {"from": "LS_2062_0001", "to": "LS_2000_0001", "type": "references", "note": "의료법"},
+    {"from": "LS_2062_0001", "to": "LS_2060_0001", "type": "references", "note": "의료기기법"}
   ],
   "law_hierarchy": {
     "0": {"name": "헌법", "types": ["constitution"]},
