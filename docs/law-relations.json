@@ -1,12 +1,12 @@
 {
   "metadata": {
     "description": "GovKR-MD 법령 관계 그래프",
-    "version": "5.2.0",
+    "version": "5.3.0",
     "updated": "2026-03-10",
     "source": "https://law.go.kr",
     "stats": {
-      "nodes": 261,
-      "edges": 855
+      "nodes": 266,
+      "edges": 890
     }
   },
   "nodes": [
@@ -914,7 +914,27 @@
 
     {"from": "LS_2102_0001", "to": "DC_2102_0001", "type": "enables"},
     {"from": "LS_2102_0001", "to": "LS_2098_0001", "type": "references", "note": "기초생활보장법"},
-    {"from": "LS_2102_0001", "to": "LS_2101_0001", "type": "references", "note": "아동복지법"}
+    {"from": "LS_2102_0001", "to": "LS_2101_0001", "type": "references", "note": "아동복지법"},
+
+    {"from": "LS_1948_0001", "to": "LS_2103_0001", "type": "parent", "article": "제22조"},
+    {"from": "LS_1948_0001", "to": "LS_2104_0001", "type": "parent", "article": "제22조"},
+    {"from": "LS_1948_0001", "to": "LS_2105_0001", "type": "parent", "article": "제22조"},
+    {"from": "LS_1948_0001", "to": "LS_2106_0001", "type": "parent", "article": "제21조"},
+    {"from": "LS_1948_0001", "to": "LS_2107_0001", "type": "parent", "article": "제22조"},
+
+    {"from": "LS_2103_0001", "to": "DC_2103_0001", "type": "enables"},
+    {"from": "LS_2103_0001", "to": "LS_2104_0001", "type": "references", "note": "문화재보호법"},
+    {"from": "LS_2103_0001", "to": "LS_2105_0001", "type": "references", "note": "저작권법"},
+
+    {"from": "LS_2104_0001", "to": "DC_2104_0001", "type": "enables"},
+
+    {"from": "LS_2105_0001", "to": "DC_2105_0001", "type": "enables"},
+
+    {"from": "LS_2106_0001", "to": "DC_2106_0001", "type": "enables"},
+    {"from": "LS_2106_0001", "to": "LS_2105_0001", "type": "references", "note": "저작권법"},
+
+    {"from": "LS_2107_0001", "to": "DC_2107_0001", "type": "enables"},
+    {"from": "LS_2107_0001", "to": "LS_2105_0001", "type": "references", "note": "저작권법"}
   ],
   "law_hierarchy": {
     "0": {"name": "헌법", "types": ["constitution"]},
