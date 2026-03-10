@@ -1,12 +1,12 @@
 {
   "metadata": {
     "description": "GovKR-MD 법령 관계 그래프",
-    "version": "6.1.0",
+    "version": "6.2.0",
     "updated": "2026-03-10",
     "source": "https://law.go.kr",
     "stats": {
-      "nodes": 312,
-      "edges": 1137
+      "nodes": 317,
+      "edges": 1160
     }
   },
   "nodes": [
@@ -321,7 +321,13 @@
     {"id": "LS_2144_0001", "title": "개인정보보호법", "type": "law", "level": 1},
     {"id": "LS_2145_0001", "title": "전기통신사업법", "type": "law", "level": 1},
     {"id": "LS_2146_0001", "title": "전자거래법", "type": "law", "level": 1},
-    {"id": "LS_2147_0001", "title": "데이터기본법", "type": "law", "level": 1}
+    {"id": "LS_2147_0001", "title": "데이터기본법", "type": "law", "level": 1},
+
+    {"id": "LS_2148_0001", "title": "의료법", "type": "law", "level": 1},
+    {"id": "LS_2149_0001", "title": "약사법", "type": "law", "level": 1},
+    {"id": "LS_2150_0001", "title": "국민건강보험법", "type": "law", "level": 1},
+    {"id": "LS_2151_0001", "title": "감염병예방법", "type": "law", "level": 1},
+    {"id": "LS_2152_0001", "title": "응급의료법", "type": "law", "level": 1}
   ],
   "edges": [
     {"from": "LS_1948_0001", "to": "LS_1953_0293", "type": "parent", "article": "제12조"},
@@ -1155,7 +1161,31 @@
 
     {"from": "LS_2147_0001", "to": "DC_2147_0001", "type": "enables"},
     {"from": "LS_2147_0001", "to": "LS_2144_0001", "type": "references", "note": "개인정보보호법"},
-    {"from": "LS_2147_0001", "to": "LS_2143_0001", "type": "references", "note": "정보통신망법"}
+    {"from": "LS_2147_0001", "to": "LS_2143_0001", "type": "references", "note": "정보통신망법"},
+
+    {"from": "LS_1948_0001", "to": "LS_2148_0001", "type": "parent", "article": "제36조"},
+    {"from": "LS_1948_0001", "to": "LS_2149_0001", "type": "parent", "article": "제36조"},
+    {"from": "LS_1948_0001", "to": "LS_2150_0001", "type": "parent", "article": "제36조"},
+    {"from": "LS_1948_0001", "to": "LS_2151_0001", "type": "parent", "article": "제36조"},
+    {"from": "LS_1948_0001", "to": "LS_2152_0001", "type": "parent", "article": "제36조"},
+
+    {"from": "LS_2148_0001", "to": "DC_2148_0001", "type": "enables"},
+    {"from": "LS_2148_0001", "to": "LS_2150_0001", "type": "references", "note": "국민건강보험법"},
+    {"from": "LS_2148_0001", "to": "LS_2152_0001", "type": "references", "note": "응급의료법"},
+
+    {"from": "LS_2149_0001", "to": "DC_2149_0001", "type": "enables"},
+    {"from": "LS_2149_0001", "to": "LS_2148_0001", "type": "references", "note": "의료법"},
+
+    {"from": "LS_2150_0001", "to": "DC_2150_0001", "type": "enables"},
+    {"from": "LS_2150_0001", "to": "LS_2148_0001", "type": "references", "note": "의료법"},
+
+    {"from": "LS_2151_0001", "to": "DC_2151_0001", "type": "enables"},
+    {"from": "LS_2151_0001", "to": "LS_2148_0001", "type": "references", "note": "의료법"},
+    {"from": "LS_2151_0001", "to": "LS_2150_0001", "type": "references", "note": "국민건강보험법"},
+
+    {"from": "LS_2152_0001", "to": "DC_2152_0001", "type": "enables"},
+    {"from": "LS_2152_0001", "to": "LS_2148_0001", "type": "references", "note": "의료법"},
+    {"from": "LS_2152_0001", "to": "LS_2150_0001", "type": "references", "note": "국민건강보험법"}
   ],
   "law_hierarchy": {
     "0": {"name": "헌법", "types": ["constitution"]},
