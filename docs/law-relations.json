@@ -1,12 +1,12 @@
 {
   "metadata": {
     "description": "GovKR-MD 법령 관계 그래프",
-    "version": "4.7.0",
+    "version": "4.8.0",
     "updated": "2026-03-10",
     "source": "https://law.go.kr",
     "stats": {
-      "nodes": 236,
-      "edges": 680
+      "nodes": 241,
+      "edges": 715
     }
   },
   "nodes": [
@@ -247,7 +247,12 @@
     {"id": "LS_2074_0001", "title": "축산법", "type": "law", "level": 1},
     {"id": "LS_2075_0001", "title": "임업법", "type": "law", "level": 1},
     {"id": "LS_2076_0001", "title": "쌀소득보전법", "type": "law", "level": 1},
-    {"id": "LS_2077_0001", "title": "농수산물품질관리법", "type": "law", "level": 1}
+    {"id": "LS_2077_0001", "title": "농수산물품질관리법", "type": "law", "level": 1},
+    {"id": "LS_2078_0001", "title": "무역법", "type": "law", "level": 1},
+    {"id": "LS_2079_0001", "title": "외국환거래법", "type": "law", "level": 1},
+    {"id": "LS_2080_0001", "title": "외국인투자촉진법", "type": "law", "level": 1},
+    {"id": "LS_2081_0001", "title": "자유무역지역법", "type": "law", "level": 1},
+    {"id": "LS_2082_0001", "title": "관세법", "type": "law", "level": 1}
   ],
   "edges": [
     {"from": "LS_1948_0001", "to": "LS_1953_0293", "type": "parent", "article": "제12조"},
@@ -779,7 +784,30 @@
     {"from": "LS_2077_0001", "to": "DC_2077_0001", "type": "enables"},
     {"from": "LS_2077_0001", "to": "LS_2058_0001", "type": "references", "note": "식품위생법"},
     {"from": "LS_2077_0001", "to": "LS_2072_0001", "type": "references", "note": "수산업법"},
-    {"from": "LS_2077_0001", "to": "LS_2073_0001", "type": "references", "note": "농지법"}
+    {"from": "LS_2077_0001", "to": "LS_2073_0001", "type": "references", "note": "농지법"},
+
+    {"from": "LS_1948_0001", "to": "LS_2078_0001", "type": "parent", "article": "제119조"},
+    {"from": "LS_1948_0001", "to": "LS_2079_0001", "type": "parent", "article": "제119조"},
+    {"from": "LS_1948_0001", "to": "LS_2080_0001", "type": "parent", "article": "제119조"},
+    {"from": "LS_1948_0001", "to": "LS_2081_0001", "type": "parent", "article": "제119조"},
+    {"from": "LS_1948_0001", "to": "LS_2082_0001", "type": "parent", "article": "제119조"},
+
+    {"from": "LS_2078_0001", "to": "DC_2078_0001", "type": "enables"},
+    {"from": "LS_2078_0001", "to": "LS_2082_0001", "type": "references", "note": "관세법"},
+    {"from": "LS_2078_0001", "to": "LS_2079_0001", "type": "references", "note": "외국환거래법"},
+
+    {"from": "LS_2079_0001", "to": "DC_2079_0001", "type": "enables"},
+    {"from": "LS_2079_0001", "to": "LS_2078_0001", "type": "references", "note": "무역법"},
+
+    {"from": "LS_2080_0001", "to": "DC_2080_0001", "type": "enables"},
+    {"from": "LS_2080_0001", "to": "LS_2079_0001", "type": "references", "note": "외국환거래법"},
+
+    {"from": "LS_2081_0001", "to": "DC_2081_0001", "type": "enables"},
+    {"from": "LS_2081_0001", "to": "LS_2082_0001", "type": "references", "note": "관세법"},
+    {"from": "LS_2081_0001", "to": "LS_2080_0001", "type": "references", "note": "외국인투자촉진법"},
+
+    {"from": "LS_2082_0001", "to": "DC_2082_0001", "type": "enables"},
+    {"from": "LS_2082_0001", "to": "LS_2078_0001", "type": "references", "note": "무역법"}
   ],
   "law_hierarchy": {
     "0": {"name": "헌법", "types": ["constitution"]},
