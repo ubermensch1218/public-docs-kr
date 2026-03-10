@@ -1,12 +1,12 @@
 {
   "metadata": {
     "description": "GovKR-MD 법령 관계 그래프",
-    "version": "5.7.0",
+    "version": "5.8.0",
     "updated": "2026-03-10",
     "source": "https://law.go.kr",
     "stats": {
-      "nodes": 292,
-      "edges": 1045
+      "nodes": 297,
+      "edges": 1068
     }
   },
   "nodes": [
@@ -297,7 +297,13 @@
     {"id": "LS_2124_0001", "title": "대기환경보전법", "type": "law", "level": 1},
     {"id": "LS_2125_0001", "title": "수질환경보전법", "type": "law", "level": 1},
     {"id": "LS_2126_0001", "title": "폐기물관리법", "type": "law", "level": 1},
-    {"id": "LS_2127_0001", "title": "자연환경보전법", "type": "law", "level": 1}
+    {"id": "LS_2127_0001", "title": "자연환경보전법", "type": "law", "level": 1},
+
+    {"id": "LS_2128_0001", "title": "건설기본법", "type": "law", "level": 1},
+    {"id": "LS_2129_0001", "title": "건축법", "type": "law", "level": 1},
+    {"id": "LS_2130_0001", "title": "주택법", "type": "law", "level": 1},
+    {"id": "LS_2131_0001", "title": "도시개발법", "type": "law", "level": 1},
+    {"id": "LS_2132_0001", "title": "국토계획법", "type": "law", "level": 1}
   ],
   "edges": [
     {"from": "LS_1948_0001", "to": "LS_1953_0293", "type": "parent", "article": "제12조"},
@@ -1040,7 +1046,30 @@
     {"from": "LS_2126_0001", "to": "LS_2123_0001", "type": "references", "note": "환경정책기본법"},
 
     {"from": "LS_2127_0001", "to": "DC_2127_0001", "type": "enables"},
-    {"from": "LS_2127_0001", "to": "LS_2123_0001", "type": "references", "note": "환경정책기본법"}
+    {"from": "LS_2127_0001", "to": "LS_2123_0001", "type": "references", "note": "환경정책기본법"},
+
+    {"from": "LS_1948_0001", "to": "LS_2128_0001", "type": "parent", "article": "제35조"},
+    {"from": "LS_1948_0001", "to": "LS_2129_0001", "type": "parent", "article": "제35조"},
+    {"from": "LS_1948_0001", "to": "LS_2130_0001", "type": "parent", "article": "제35조"},
+    {"from": "LS_1948_0001", "to": "LS_2131_0001", "type": "parent", "article": "제35조"},
+    {"from": "LS_1948_0001", "to": "LS_2132_0001", "type": "parent", "article": "제35조"},
+
+    {"from": "LS_2128_0001", "to": "DC_2128_0001", "type": "enables"},
+    {"from": "LS_2128_0001", "to": "LS_2132_0001", "type": "references", "note": "국토계획법"},
+    {"from": "LS_2128_0001", "to": "LS_2129_0001", "type": "references", "note": "건축법"},
+
+    {"from": "LS_2129_0001", "to": "DC_2129_0001", "type": "enables"},
+    {"from": "LS_2129_0001", "to": "LS_2132_0001", "type": "references", "note": "국토계획법"},
+
+    {"from": "LS_2130_0001", "to": "DC_2130_0001", "type": "enables"},
+    {"from": "LS_2130_0001", "to": "LS_2129_0001", "type": "references", "note": "건축법"},
+
+    {"from": "LS_2131_0001", "to": "DC_2131_0001", "type": "enables"},
+    {"from": "LS_2131_0001", "to": "LS_2132_0001", "type": "references", "note": "국토계획법"},
+
+    {"from": "LS_2132_0001", "to": "DC_2132_0001", "type": "enables"},
+    {"from": "LS_2132_0001", "to": "LS_2129_0001", "type": "enables"},
+    {"from": "LS_2132_0001", "to": "LS_2130_0001", "type": "enables"}
   ],
   "law_hierarchy": {
     "0": {"name": "헌법", "types": ["constitution"]},
