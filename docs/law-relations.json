@@ -1,12 +1,12 @@
 {
   "metadata": {
     "description": "GovKR-MD 법령 관계 그래프",
-    "version": "5.4.0",
+    "version": "5.5.0",
     "updated": "2026-03-10",
     "source": "https://law.go.kr",
     "stats": {
-      "nodes": 277,
-      "edges": 940
+      "nodes": 282,
+      "edges": 975
     }
   },
   "nodes": [
@@ -282,7 +282,12 @@
     {"id": "LS_2109_0001", "title": "전기사업법", "type": "law", "level": 1},
     {"id": "LS_2110_0001", "title": "가스사업법", "type": "law", "level": 1},
     {"id": "LS_2111_0001", "title": "석유사업법", "type": "law", "level": 1},
-    {"id": "LS_2112_0001", "title": "신재생에너지법", "type": "law", "level": 1}
+    {"id": "LS_2112_0001", "title": "신재생에너지법", "type": "law", "level": 1},
+    {"id": "LS_2113_0001", "title": "교육기본법", "type": "law", "level": 1},
+    {"id": "LS_2114_0001", "title": "초중등교육법", "type": "law", "level": 1},
+    {"id": "LS_2115_0001", "title": "고등교육법", "type": "law", "level": 1},
+    {"id": "LS_2116_0001", "title": "평생교육법", "type": "law", "level": 1},
+    {"id": "LS_2117_0001", "title": "유아교육법", "type": "law", "level": 1}
   ],
   "edges": [
     {"from": "LS_1948_0001", "to": "LS_1953_0293", "type": "parent", "article": "제12조"},
@@ -966,7 +971,23 @@
 
     {"from": "LS_2112_0001", "to": "DC_2112_0001", "type": "enables"},
     {"from": "LS_2112_0001", "to": "LS_2109_0001", "type": "references", "note": "전기사업법"},
-    {"from": "LS_2112_0001", "to": "LS_2108_0001", "type": "references", "note": "에너지법"}
+    {"from": "LS_2112_0001", "to": "LS_2108_0001", "type": "references", "note": "에너지법"},
+
+    {"from": "LS_1948_0001", "to": "LS_2113_0001", "type": "parent", "article": "제31조"},
+    {"from": "LS_1948_0001", "to": "LS_2114_0001", "type": "parent", "article": "제31조"},
+    {"from": "LS_1948_0001", "to": "LS_2115_0001", "type": "parent", "article": "제31조"},
+    {"from": "LS_1948_0001", "to": "LS_2116_0001", "type": "parent", "article": "제31조"},
+    {"from": "LS_1948_0001", "to": "LS_2117_0001", "type": "parent", "article": "제31조"},
+    {"from": "LS_2113_0001", "to": "DC_2113_0001", "type": "enables"},
+    {"from": "LS_2113_0001", "to": "LS_2114_0001", "type": "references", "note": "초중등교육법"},
+    {"from": "LS_2114_0001", "to": "DC_2114_0001", "type": "enables"},
+    {"from": "LS_2114_0001", "to": "LS_2113_0001", "type": "references", "note": "교육기본법"},
+    {"from": "LS_2115_0001", "to": "DC_2115_0001", "type": "enables"},
+    {"from": "LS_2115_0001", "to": "LS_2114_0001", "type": "references", "note": "초중등교육법"},
+    {"from": "LS_2116_0001", "to": "DC_2116_0001", "type": "enables"},
+    {"from": "LS_2116_0001", "to": "LS_2113_0001", "type": "references", "note": "교육기본법"},
+    {"from": "LS_2117_0001", "to": "DC_2117_0001", "type": "enables"},
+    {"from": "LS_2117_0001", "to": "LS_2113_0001", "type": "references", "note": "교육기본법"}
   ],
   "law_hierarchy": {
     "0": {"name": "헌법", "types": ["constitution"]},
