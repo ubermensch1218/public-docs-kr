@@ -1,12 +1,12 @@
 {
   "metadata": {
     "description": "GovKR-MD 법령 관계 그래프",
-    "version": "5.9.0",
+    "version": "6.0.0",
     "updated": "2026-03-10",
     "source": "https://law.go.kr",
     "stats": {
-      "nodes": 302,
-      "edges": 1091
+      "nodes": 307,
+      "edges": 1114
     }
   },
   "nodes": [
@@ -309,7 +309,13 @@
     {"id": "LS_2134_0001", "title": "공정거래법", "type": "law", "level": 1},
     {"id": "LS_2135_0001", "title": "독점규제법", "type": "law", "level": 1},
     {"id": "LS_2136_0001", "title": "하도급거래법", "type": "law", "level": 1},
-    {"id": "LS_2137_0001", "title": "방문판매법", "type": "law", "level": 1}
+    {"id": "LS_2137_0001", "title": "방문판매법", "type": "law", "level": 1},
+
+    {"id": "LS_2138_0001", "title": "도로교통법", "type": "law", "level": 1},
+    {"id": "LS_2139_0001", "title": "자동차관리법", "type": "law", "level": 1},
+    {"id": "LS_2140_0001", "title": "운수사업법", "type": "law", "level": 1},
+    {"id": "LS_2141_0001", "title": "철도사업법", "type": "law", "level": 1},
+    {"id": "LS_2142_0001", "title": "항공법", "type": "law", "level": 1}
   ],
   "edges": [
     {"from": "LS_1948_0001", "to": "LS_1953_0293", "type": "parent", "article": "제12조"},
@@ -1097,7 +1103,30 @@
     {"from": "LS_2136_0001", "to": "LS_2134_0001", "type": "references", "note": "공정거래법"},
 
     {"from": "LS_2137_0001", "to": "DC_2137_0001", "type": "enables"},
-    {"from": "LS_2137_0001", "to": "LS_2133_0001", "type": "references", "note": "소비자기본법"}
+    {"from": "LS_2137_0001", "to": "LS_2133_0001", "type": "references", "note": "소비자기본법"},
+
+    {"from": "LS_1948_0001", "to": "LS_2138_0001", "type": "parent", "article": "제35조"},
+    {"from": "LS_1948_0001", "to": "LS_2139_0001", "type": "parent", "article": "제35조"},
+    {"from": "LS_1948_0001", "to": "LS_2140_0001", "type": "parent", "article": "제35조"},
+    {"from": "LS_1948_0001", "to": "LS_2141_0001", "type": "parent", "article": "제35조"},
+    {"from": "LS_1948_0001", "to": "LS_2142_0001", "type": "parent", "article": "제35조"},
+
+    {"from": "LS_2138_0001", "to": "DC_2138_0001", "type": "enables"},
+    {"from": "LS_2138_0001", "to": "LS_2139_0001", "type": "references", "note": "자동차관리법"},
+
+    {"from": "LS_2139_0001", "to": "DC_2139_0001", "type": "enables"},
+    {"from": "LS_2139_0001", "to": "LS_2138_0001", "type": "references", "note": "도로교통법"},
+    {"from": "LS_2139_0001", "to": "LS_2124_0001", "type": "references", "note": "대기환경보전법"},
+
+    {"from": "LS_2140_0001", "to": "DC_2140_0001", "type": "enables"},
+    {"from": "LS_2140_0001", "to": "LS_2138_0001", "type": "references", "note": "도로교통법"},
+    {"from": "LS_2140_0001", "to": "LS_2139_0001", "type": "references", "note": "자동차관리법"},
+
+    {"from": "LS_2141_0001", "to": "DC_2141_0001", "type": "enables"},
+    {"from": "LS_2141_0001", "to": "LS_2132_0001", "type": "references", "note": "국토계획법"},
+
+    {"from": "LS_2142_0001", "to": "DC_2142_0001", "type": "enables"},
+    {"from": "LS_2142_0001", "to": "LS_2132_0001", "type": "references", "note": "국토계획법"}
   ],
   "law_hierarchy": {
     "0": {"name": "헌법", "types": ["constitution"]},
