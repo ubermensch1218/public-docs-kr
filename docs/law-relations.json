@@ -1,12 +1,12 @@
 {
   "metadata": {
     "description": "GovKR-MD 법령 관계 그래프",
-    "version": "4.8.0",
+    "version": "4.9.0",
     "updated": "2026-03-10",
     "source": "https://law.go.kr",
     "stats": {
-      "nodes": 241,
-      "edges": 715
+      "nodes": 246,
+      "edges": 750
     }
   },
   "nodes": [
@@ -252,7 +252,12 @@
     {"id": "LS_2079_0001", "title": "외국환거래법", "type": "law", "level": 1},
     {"id": "LS_2080_0001", "title": "외국인투자촉진법", "type": "law", "level": 1},
     {"id": "LS_2081_0001", "title": "자유무역지역법", "type": "law", "level": 1},
-    {"id": "LS_2082_0001", "title": "관세법", "type": "law", "level": 1}
+    {"id": "LS_2082_0001", "title": "관세법", "type": "law", "level": 1},
+    {"id": "LS_2083_0001", "title": "병역법", "type": "law", "level": 1},
+    {"id": "LS_2084_0001", "title": "군인사법", "type": "law", "level": 1},
+    {"id": "LS_2085_0001", "title": "군복무기본법", "type": "law", "level": 1},
+    {"id": "LS_2086_0001", "title": "병무행정법", "type": "law", "level": 1},
+    {"id": "LS_2087_0001", "title": "전쟁예비법", "type": "law", "level": 1}
   ],
   "edges": [
     {"from": "LS_1948_0001", "to": "LS_1953_0293", "type": "parent", "article": "제12조"},
@@ -807,7 +812,30 @@
     {"from": "LS_2081_0001", "to": "LS_2080_0001", "type": "references", "note": "외국인투자촉진법"},
 
     {"from": "LS_2082_0001", "to": "DC_2082_0001", "type": "enables"},
-    {"from": "LS_2082_0001", "to": "LS_2078_0001", "type": "references", "note": "무역법"}
+    {"from": "LS_2082_0001", "to": "LS_2078_0001", "type": "references", "note": "무역법"},
+
+    {"from": "LS_1948_0001", "to": "LS_2083_0001", "type": "parent", "article": "제39조"},
+    {"from": "LS_1948_0001", "to": "LS_2084_0001", "type": "parent", "article": "제39조"},
+    {"from": "LS_1948_0001", "to": "LS_2085_0001", "type": "parent", "article": "제39조"},
+    {"from": "LS_1948_0001", "to": "LS_2086_0001", "type": "parent", "article": "제39조"},
+    {"from": "LS_1948_0001", "to": "LS_2087_0001", "type": "parent", "article": "제39조"},
+
+    {"from": "LS_2083_0001", "to": "DC_2083_0001", "type": "enables"},
+    {"from": "LS_2083_0001", "to": "LS_2084_0001", "type": "references", "note": "군인사법"},
+
+    {"from": "LS_2084_0001", "to": "DC_2084_0001", "type": "enables"},
+    {"from": "LS_2084_0001", "to": "LS_2083_0001", "type": "references", "note": "병역법"},
+
+    {"from": "LS_2085_0001", "to": "DC_2085_0001", "type": "enables"},
+    {"from": "LS_2085_0001", "to": "LS_2083_0001", "type": "references", "note": "병역법"},
+    {"from": "LS_2085_0001", "to": "LS_2084_0001", "type": "references", "note": "군인사법"},
+
+    {"from": "LS_2086_0001", "to": "DC_2086_0001", "type": "enables"},
+    {"from": "LS_2086_0001", "to": "LS_2083_0001", "type": "references", "note": "병역법"},
+
+    {"from": "LS_2087_0001", "to": "DC_2087_0001", "type": "enables"},
+    {"from": "LS_2087_0001", "to": "LS_2083_0001", "type": "references", "note": "병역법"},
+    {"from": "LS_2087_0001", "to": "LS_2053_0001", "type": "references", "note": "재난안전법"}
   ],
   "law_hierarchy": {
     "0": {"name": "헌법", "types": ["constitution"]},
