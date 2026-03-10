@@ -1,12 +1,12 @@
 {
   "metadata": {
     "description": "GovKR-MD 법령 관계 그래프",
-    "version": "5.1.0",
+    "version": "5.2.0",
     "updated": "2026-03-10",
     "source": "https://law.go.kr",
     "stats": {
-      "nodes": 256,
-      "edges": 820
+      "nodes": 261,
+      "edges": 855
     }
   },
   "nodes": [
@@ -267,7 +267,12 @@
     {"id": "LS_2094_0001", "title": "산업재해보상보험법", "type": "law", "level": 1},
     {"id": "LS_2095_0001", "title": "고용정책기본법", "type": "law", "level": 1},
     {"id": "LS_2096_0001", "title": "직업안정법", "type": "law", "level": 1},
-    {"id": "LS_2097_0001", "title": "최저임금법", "type": "law", "level": 1}
+    {"id": "LS_2097_0001", "title": "최저임금법", "type": "law", "level": 1},
+    {"id": "LS_2098_0001", "title": "기초생활보장법", "type": "law", "level": 1},
+    {"id": "LS_2099_0001", "title": "장애인복지법", "type": "law", "level": 1},
+    {"id": "LS_2100_0001", "title": "노인복지법", "type": "law", "level": 1},
+    {"id": "LS_2101_0001", "title": "아동복지법", "type": "law", "level": 1},
+    {"id": "LS_2102_0001", "title": "한부모가족지원법", "type": "law", "level": 1}
   ],
   "edges": [
     {"from": "LS_1948_0001", "to": "LS_1953_0293", "type": "parent", "article": "제12조"},
@@ -889,7 +894,27 @@
     {"from": "LS_2096_0001", "to": "LS_2095_0001", "type": "references", "note": "고용정책기본법"},
 
     {"from": "LS_2097_0001", "to": "DC_2097_0001", "type": "enables"},
-    {"from": "LS_2097_0001", "to": "LS_1953_0286", "type": "references", "note": "근로기준법"}
+    {"from": "LS_2097_0001", "to": "LS_1953_0286", "type": "references", "note": "근로기준법"},
+
+    {"from": "LS_1948_0001", "to": "LS_2098_0001", "type": "parent", "article": "제34조"},
+    {"from": "LS_1948_0001", "to": "LS_2099_0001", "type": "parent", "article": "제34조"},
+    {"from": "LS_1948_0001", "to": "LS_2100_0001", "type": "parent", "article": "제34조"},
+    {"from": "LS_1948_0001", "to": "LS_2101_0001", "type": "parent", "article": "제36조"},
+    {"from": "LS_1948_0001", "to": "LS_2102_0001", "type": "parent", "article": "제36조"},
+
+    {"from": "LS_2098_0001", "to": "DC_2098_0001", "type": "enables"},
+    {"from": "LS_2098_0001", "to": "LS_2099_0001", "type": "references", "note": "장애인복지법"},
+
+    {"from": "LS_2099_0001", "to": "DC_2099_0001", "type": "enables"},
+    {"from": "LS_2099_0001", "to": "LS_2093_0001", "type": "references", "note": "고용보험법"},
+
+    {"from": "LS_2100_0001", "to": "DC_2100_0001", "type": "enables"},
+
+    {"from": "LS_2101_0001", "to": "DC_2101_0001", "type": "enables"},
+
+    {"from": "LS_2102_0001", "to": "DC_2102_0001", "type": "enables"},
+    {"from": "LS_2102_0001", "to": "LS_2098_0001", "type": "references", "note": "기초생활보장법"},
+    {"from": "LS_2102_0001", "to": "LS_2101_0001", "type": "references", "note": "아동복지법"}
   ],
   "law_hierarchy": {
     "0": {"name": "헌법", "types": ["constitution"]},
