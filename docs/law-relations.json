@@ -1,12 +1,12 @@
 {
   "metadata": {
     "description": "GovKR-MD 법령 관계 그래프",
-    "version": "5.3.0",
+    "version": "5.4.0",
     "updated": "2026-03-10",
     "source": "https://law.go.kr",
     "stats": {
-      "nodes": 266,
-      "edges": 890
+      "nodes": 277,
+      "edges": 940
     }
   },
   "nodes": [
@@ -272,7 +272,17 @@
     {"id": "LS_2099_0001", "title": "장애인복지법", "type": "law", "level": 1},
     {"id": "LS_2100_0001", "title": "노인복지법", "type": "law", "level": 1},
     {"id": "LS_2101_0001", "title": "아동복지법", "type": "law", "level": 1},
-    {"id": "LS_2102_0001", "title": "한부모가족지원법", "type": "law", "level": 1}
+    {"id": "LS_2102_0001", "title": "한부모가족지원법", "type": "law", "level": 1},
+    {"id": "LS_2103_0001", "title": "문화예술진흥법", "type": "law", "level": 1},
+    {"id": "LS_2104_0001", "title": "문화재보호법", "type": "law", "level": 1},
+    {"id": "LS_2105_0001", "title": "저작권법", "type": "law", "level": 1},
+    {"id": "LS_2106_0001", "title": "방송법", "type": "law", "level": 1},
+    {"id": "LS_2107_0001", "title": "영화진흥법", "type": "law", "level": 1},
+    {"id": "LS_2108_0001", "title": "에너지이용합리화법", "type": "law", "level": 1},
+    {"id": "LS_2109_0001", "title": "전기사업법", "type": "law", "level": 1},
+    {"id": "LS_2110_0001", "title": "가스사업법", "type": "law", "level": 1},
+    {"id": "LS_2111_0001", "title": "석유사업법", "type": "law", "level": 1},
+    {"id": "LS_2112_0001", "title": "신재생에너지법", "type": "law", "level": 1}
   ],
   "edges": [
     {"from": "LS_1948_0001", "to": "LS_1953_0293", "type": "parent", "article": "제12조"},
@@ -934,7 +944,29 @@
     {"from": "LS_2106_0001", "to": "LS_2105_0001", "type": "references", "note": "저작권법"},
 
     {"from": "LS_2107_0001", "to": "DC_2107_0001", "type": "enables"},
-    {"from": "LS_2107_0001", "to": "LS_2105_0001", "type": "references", "note": "저작권법"}
+    {"from": "LS_2107_0001", "to": "LS_2105_0001", "type": "references", "note": "저작권법"},
+
+    {"from": "LS_1948_0001", "to": "LS_2108_0001", "type": "parent", "article": "제119조"},
+    {"from": "LS_1948_0001", "to": "LS_2109_0001", "type": "parent", "article": "제119조"},
+    {"from": "LS_1948_0001", "to": "LS_2110_0001", "type": "parent", "article": "제119조"},
+    {"from": "LS_1948_0001", "to": "LS_2111_0001", "type": "parent", "article": "제119조"},
+    {"from": "LS_1948_0001", "to": "LS_2112_0001", "type": "parent", "article": "제119조"},
+
+    {"from": "LS_2108_0001", "to": "DC_2108_0001", "type": "enables"},
+    {"from": "LS_2108_0001", "to": "LS_2109_0001", "type": "references", "note": "전기사업법"},
+
+    {"from": "LS_2109_0001", "to": "DC_2109_0001", "type": "enables"},
+    {"from": "LS_2109_0001", "to": "LS_2108_0001", "type": "references", "note": "에너지법"},
+
+    {"from": "LS_2110_0001", "to": "DC_2110_0001", "type": "enables"},
+    {"from": "LS_2110_0001", "to": "LS_2108_0001", "type": "references", "note": "에너지법"},
+
+    {"from": "LS_2111_0001", "to": "DC_2111_0001", "type": "enables"},
+    {"from": "LS_2111_0001", "to": "LS_2108_0001", "type": "references", "note": "에너지법"},
+
+    {"from": "LS_2112_0001", "to": "DC_2112_0001", "type": "enables"},
+    {"from": "LS_2112_0001", "to": "LS_2109_0001", "type": "references", "note": "전기사업법"},
+    {"from": "LS_2112_0001", "to": "LS_2108_0001", "type": "references", "note": "에너지법"}
   ],
   "law_hierarchy": {
     "0": {"name": "헌법", "types": ["constitution"]},
