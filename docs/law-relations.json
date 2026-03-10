@@ -1,12 +1,12 @@
 {
   "metadata": {
     "description": "GovKR-MD 법령 관계 그래프",
-    "version": "5.5.0",
+    "version": "5.6.0",
     "updated": "2026-03-10",
     "source": "https://law.go.kr",
     "stats": {
-      "nodes": 282,
-      "edges": 975
+      "nodes": 287,
+      "edges": 1010
     }
   },
   "nodes": [
@@ -287,7 +287,12 @@
     {"id": "LS_2114_0001", "title": "초중등교육법", "type": "law", "level": 1},
     {"id": "LS_2115_0001", "title": "고등교육법", "type": "law", "level": 1},
     {"id": "LS_2116_0001", "title": "평생교육법", "type": "law", "level": 1},
-    {"id": "LS_2117_0001", "title": "유아교육법", "type": "law", "level": 1}
+    {"id": "LS_2117_0001", "title": "유아교육법", "type": "law", "level": 1},
+    {"id": "LS_2118_0001", "title": "은행법", "type": "law", "level": 1},
+    {"id": "LS_2119_0001", "title": "금융지원회법", "type": "law", "level": 1},
+    {"id": "LS_2120_0001", "title": "자본시장법", "type": "law", "level": 1},
+    {"id": "LS_2121_0001", "title": "보험업법", "type": "law", "level": 1},
+    {"id": "LS_2122_0001", "title": "신용정보법", "type": "law", "level": 1}
   ],
   "edges": [
     {"from": "LS_1948_0001", "to": "LS_1953_0293", "type": "parent", "article": "제12조"},
@@ -987,7 +992,29 @@
     {"from": "LS_2116_0001", "to": "DC_2116_0001", "type": "enables"},
     {"from": "LS_2116_0001", "to": "LS_2113_0001", "type": "references", "note": "교육기본법"},
     {"from": "LS_2117_0001", "to": "DC_2117_0001", "type": "enables"},
-    {"from": "LS_2117_0001", "to": "LS_2113_0001", "type": "references", "note": "교육기본법"}
+    {"from": "LS_2117_0001", "to": "LS_2113_0001", "type": "references", "note": "교육기본법"},
+
+    {"from": "LS_1948_0001", "to": "LS_2118_0001", "type": "parent", "article": "제119조"},
+    {"from": "LS_1948_0001", "to": "LS_2119_0001", "type": "parent", "article": "제119조"},
+    {"from": "LS_1948_0001", "to": "LS_2120_0001", "type": "parent", "article": "제119조"},
+    {"from": "LS_1948_0001", "to": "LS_2121_0001", "type": "parent", "article": "제119조"},
+    {"from": "LS_1948_0001", "to": "LS_2122_0001", "type": "parent", "article": "제17조"},
+
+    {"from": "LS_2118_0001", "to": "DC_2118_0001", "type": "enables"},
+    {"from": "LS_2118_0001", "to": "LS_2119_0001", "type": "references", "note": "금융지원회법"},
+    {"from": "LS_2118_0001", "to": "LS_2120_0001", "type": "references", "note": "자본시장법"},
+
+    {"from": "LS_2119_0001", "to": "DC_2119_0001", "type": "enables"},
+    {"from": "LS_2119_0001", "to": "LS_2118_0001", "type": "references", "note": "은행법"},
+
+    {"from": "LS_2120_0001", "to": "DC_2120_0001", "type": "enables"},
+    {"from": "LS_2120_0001", "to": "LS_2118_0001", "type": "references", "note": "은행법"},
+
+    {"from": "LS_2121_0001", "to": "DC_2121_0001", "type": "enables"},
+    {"from": "LS_2121_0001", "to": "LS_2120_0001", "type": "references", "note": "자본시장법"},
+
+    {"from": "LS_2122_0001", "to": "DC_2122_0001", "type": "enables"},
+    {"from": "LS_2122_0001", "to": "LS_2118_0001", "type": "references", "note": "은행법"}
   ],
   "law_hierarchy": {
     "0": {"name": "헌법", "types": ["constitution"]},
