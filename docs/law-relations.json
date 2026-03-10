@@ -1,12 +1,12 @@
 {
   "metadata": {
     "description": "GovKR-MD 법령 관계 그래프",
-    "version": "4.9.0",
+    "version": "5.0.0",
     "updated": "2026-03-10",
     "source": "https://law.go.kr",
     "stats": {
-      "nodes": 246,
-      "edges": 750
+      "nodes": 251,
+      "edges": 785
     }
   },
   "nodes": [
@@ -257,7 +257,12 @@
     {"id": "LS_2084_0001", "title": "군인사법", "type": "law", "level": 1},
     {"id": "LS_2085_0001", "title": "군복무기본법", "type": "law", "level": 1},
     {"id": "LS_2086_0001", "title": "병무행정법", "type": "law", "level": 1},
-    {"id": "LS_2087_0001", "title": "전쟁예비법", "type": "law", "level": 1}
+    {"id": "LS_2087_0001", "title": "전쟁예비법", "type": "law", "level": 1},
+    {"id": "LS_2088_0001", "title": "과학기술기본법", "type": "law", "level": 1},
+    {"id": "LS_2089_0001", "title": "기술개발촉진법", "type": "law", "level": 1},
+    {"id": "LS_2090_0001", "title": "정보통신기본법", "type": "law", "level": 1},
+    {"id": "LS_2091_0001", "title": "우주개발진흥법", "type": "law", "level": 1},
+    {"id": "LS_2092_0001", "title": "원자력안전법", "type": "law", "level": 1}
   ],
   "edges": [
     {"from": "LS_1948_0001", "to": "LS_1953_0293", "type": "parent", "article": "제12조"},
@@ -835,7 +840,29 @@
 
     {"from": "LS_2087_0001", "to": "DC_2087_0001", "type": "enables"},
     {"from": "LS_2087_0001", "to": "LS_2083_0001", "type": "references", "note": "병역법"},
-    {"from": "LS_2087_0001", "to": "LS_2053_0001", "type": "references", "note": "재난안전법"}
+    {"from": "LS_2087_0001", "to": "LS_2053_0001", "type": "references", "note": "재난안전법"},
+
+    {"from": "LS_1948_0001", "to": "LS_2088_0001", "type": "parent", "article": "제127조"},
+    {"from": "LS_1948_0001", "to": "LS_2089_0001", "type": "parent", "article": "제119조"},
+    {"from": "LS_1948_0001", "to": "LS_2090_0001", "type": "parent", "article": "제127조"},
+    {"from": "LS_1948_0001", "to": "LS_2091_0001", "type": "parent", "article": "제127조"},
+    {"from": "LS_1948_0001", "to": "LS_2092_0001", "type": "parent", "article": "제35조"},
+
+    {"from": "LS_2088_0001", "to": "DC_2088_0001", "type": "enables"},
+    {"from": "LS_2088_0001", "to": "LS_2089_0001", "type": "references", "note": "기술개발촉진법"},
+
+    {"from": "LS_2089_0001", "to": "DC_2089_0001", "type": "enables"},
+    {"from": "LS_2089_0001", "to": "LS_2088_0001", "type": "references", "note": "과학기술기본법"},
+
+    {"from": "LS_2090_0001", "to": "DC_2090_0001", "type": "enables"},
+    {"from": "LS_2090_0001", "to": "LS_2088_0001", "type": "references", "note": "과학기술기본법"},
+
+    {"from": "LS_2091_0001", "to": "DC_2091_0001", "type": "enables"},
+    {"from": "LS_2091_0001", "to": "LS_2088_0001", "type": "references", "note": "과학기술기본법"},
+
+    {"from": "LS_2092_0001", "to": "DC_2092_0001", "type": "enables"},
+    {"from": "LS_2092_0001", "to": "LS_2088_0001", "type": "references", "note": "과학기술기본법"},
+    {"from": "LS_2092_0001", "to": "LS_1972_0237", "type": "references", "note": "환경정책기본법"}
   ],
   "law_hierarchy": {
     "0": {"name": "헌법", "types": ["constitution"]},
